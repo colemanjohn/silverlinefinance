@@ -22,6 +22,57 @@
         contain-intrinsic-size: 3000px 1500px;
       }
     </style>
+    <style>
+  /* Basic modern styling */
+  .custom-login-form {
+    max-width: 400px;
+    margin: auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    font-family: "Inter", sans-serif;
+  }
+
+  .custom-login-form .form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .custom-login-form label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333 !important;
+  }
+
+  .custom-login-form input.form-control {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+  }
+
+  .custom-login-form .btn {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .custom-login-form .btn:hover {
+    background-color: #0056b3;
+  }
+
+  .custom-login-form .form-remember label {
+    font-weight: 500;
+    cursor: pointer;
+  }
+</style>
 
     <!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
     <title>Login - Silverline Finance Limited</title>
@@ -2335,92 +2386,61 @@
                         data-widget_type="login.default"
                       >
                         <div class="elementor-widget-container">
-                          <form
-                            class="elementor-login elementor-form"
-                            method="post"
-                            action="https://www.districtfinancialltd.com/wp-login.php"
-                          >
-                            <input
-                              type="hidden"
-                              name="redirect_to"
-                              value="https://www.districtfinancialltd.com/dashboard/"
-                            />
-                            <div class="elementor-form-fields-wrapper">
-                              <div
-                                class="elementor-field-type-text elementor-field-group elementor-column elementor-col-100 elementor-field-required"
-                              >
-                                <label
-                                  for="user-f6a714b"
-                                  class="elementor-field-label"
-                                  >Username</label
-                                >
-                                <input
-                                  size="1"
-                                  type="text"
-                                  name="log"
-                                  id="user-f6a714b"
-                                  placeholder=""
-                                  class="elementor-field elementor-field-textual elementor-size-sm"
-                                />
-                              </div>
-                              <div
-                                class="elementor-field-type-text elementor-field-group elementor-column elementor-col-100 elementor-field-required"
-                              >
-                                <label
-                                  for="password-f6a714b"
-                                  class="elementor-field-label"
-                                  >Password</label
-                                >
-                                <input
-                                  size="1"
-                                  type="password"
-                                  name="pwd"
-                                  id="password-f6a714b"
-                                  placeholder=""
-                                  class="elementor-field elementor-field-textual elementor-size-sm"
-                                />
-                              </div>
-
-                              <div
-                                class="elementor-field-type-checkbox elementor-field-group elementor-column elementor-col-100 elementor-remember-me"
-                              >
-                                <label for="elementor-login-remember-me">
-                                  <input
-                                    type="checkbox"
-                                    id="elementor-login-remember-me"
-                                    name="rememberme"
-                                    value="forever"
-                                  />
-                                  Remember Me
-                                </label>
-                              </div>
-
-                              <div
-                                class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100"
-                              >
-                                <button
-                                  type="submit"
-                                  class="elementor-size-md elementor-button"
-                                  name="wp-submit"
-                                >
-                                  <span class="elementor-button-text"
-                                    >Log In</span
-                                  >
-                                </button>
-                              </div>
-
-                              <div
-                                class="elementor-field-group elementor-column elementor-col-100"
-                              >
-                                <a
-                                  class="elementor-lost-password"
-                                  href="https://www.districtfinancialltd.com/wp-login.php?action=lostpassword&amp;redirect_to=https%3A%2F%2Fwww.districtfinancialltd.com%2Fdashboard%2F"
-                                  role="link"
-                                >
-                                  Lost your password?
-                                </a>
-                              </div>
+                          <form id="loginForm" class="custom-login-form">
+                            <!-- Username Field -->
+                            <div class="form-group">
+                              <label for="username">Username</label>
+                              <input
+                                type="text"
+                                name="username"
+                                id="username"
+                                class="form-control"
+                                placeholder="Enter your username"
+                                required
+                              />
                             </div>
+
+                            <!-- Password Field -->
+                            <div class="form-group">
+                              <label for="password">Password</label>
+                              <input
+                                type="password"
+                                name="password"
+                                id="password"
+                                class="form-control"
+                                placeholder="Enter your password"
+                                required
+                              />
+                            </div>
+
+                            <!-- Remember Me -->
+                            <div class="form-group form-remember">
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="rememberme"
+                                  value="true"
+                                />
+                                Remember Me
+                              </label>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="form-group">
+                              <button type="submit" class="btn btn-primary">
+                                Log In
+                              </button>
+                            </div>
+
+                            <!-- Custom Alert -->
+                            <div
+                              id="loginAlert"
+                              style="
+                                display: none;
+                                margin-top: 10px;
+                                color: red;
+                              "
+                            ></div>
                           </form>
                         </div>
                       </div>
@@ -2435,9 +2455,7 @@
                           <h2
                             class="elementor-heading-title elementor-size-default"
                           >
-                            <a
-                              href="register.html"
-                              role="link"
+                            <a href="register.html" role="link"
                               >Register for Internet Banking</a
                             >
                           </h2>
@@ -2605,6 +2623,46 @@
         Manage Cookie Consent
       </button>
     </div>
+
+    <script>
+  const loginForm = document.getElementById("loginForm");
+  const loginAlert = document.getElementById("loginAlert");
+
+  loginForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    loginAlert.style.display = "none";
+
+    const formData = new FormData(loginForm);
+    const payload = {
+      login: formData.get("username"),
+      password: formData.get("password"),
+      rememberme: formData.get("rememberme") === "true",
+    };
+
+    try {
+      const response = await fetch("https://silverline.pythonanywhere.com/api/auth/login/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        console.log(data);
+        // Redirect after successful login
+        window.location.href = "dashboard.html";
+      } else {
+        loginAlert.textContent = data.detail || "Login failed. Check your credentials.";
+        loginAlert.style.display = "block";
+      }
+    } catch (error) {
+      loginAlert.textContent = "Network error: " + error;
+      loginAlert.style.display = "block";
+      console.error(error);
+    }
+  });
+</script>
     <script type="text/javascript">
       const lazyloadRunObserver = () => {
         const lazyloadBackgrounds = document.querySelectorAll(

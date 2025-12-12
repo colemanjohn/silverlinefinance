@@ -22,6 +22,109 @@
         contain-intrinsic-size: 3000px 1500px;
       }
     </style>
+<style>
+  /* Custom alert style */
+  #customAlert {
+    display: none;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+</style>
+    <style>
+      #registrationForm {
+        max-width: 700px;
+        margin: auto;
+        padding: 25px;
+        background: #fff;
+        color: black;
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.09);
+        font-family: "Inter", sans-serif;
+        padding: 20px;
+      }
+      #registrationForm label {
+        color: gray !important;
+        margin: 10px 0px;
+      }
+
+      .step {
+        display: none;
+        animation: fade 0.3s ease-in-out;
+      }
+
+      .step.active {
+        display: block;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .form-group {
+        margin-bottom: 18px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-group label {
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+
+      .form-group input,
+      .form-group select {
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #d1d5db;
+      }
+
+      .btn {
+        padding: 12px 18px;
+        border-radius: 8px;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        width: 100%;
+        margin-top: 12px;
+      }
+
+      .btn:hover {
+        background: #0056b3;
+      }
+
+      .btn-prev {
+        background: #6c757d;
+        float: left;
+      }
+
+      .btn-prev:hover {
+        background: #5a6268;
+      }
+
+      .btn-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+    </style>
 
     <!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
     <title>Open Account - Silverline Finance Limited</title>
@@ -134,8 +237,8 @@
           },
           {
             "@type": "ImageObject",
-            "@id": "https://www.districtfinancialltd.com/wp-content/uploads/2025/08/district-logo-300x230.png?wsr",
-            "url": "https://www.districtfinancialltd.com/wp-content/uploads/2025/08/district-logo-300x230.png?wsr",
+            "@id": "logo.jpg",
+            "url": "logo.jpg",
             "width": "200",
             "height": "200",
             "inLanguage": "en-US"
@@ -151,7 +254,7 @@
               "@id": "https://www.districtfinancialltd.com/#website"
             },
             "primaryImageOfPage": {
-              "@id": "https://www.districtfinancialltd.com/wp-content/uploads/2025/08/district-logo-300x230.png?wsr"
+              "@id": "logo.jpg"
             },
             "inLanguage": "en-US"
           },
@@ -191,7 +294,7 @@
               "@id": "https://www.districtfinancialltd.com/open-account/#webpage"
             },
             "image": {
-              "@id": "https://www.districtfinancialltd.com/wp-content/uploads/2025/08/district-logo-300x230.png?wsr"
+              "@id": "logo.jpg"
             },
             "inLanguage": "en-US",
             "mainEntityOfPage": {
@@ -1286,20 +1389,9 @@
         }
       }
     </style>
-    <link
-      rel="icon"
-      href="logo.jpg"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      href="logo.jpg"
-      sizes="192x192"
-    />
-    <meta
-      name="msapplication-TileImage"
-      content="logo.jpg"
-    />
+    <link rel="icon" href="logo.jpg" sizes="32x32" />
+    <link rel="icon" href="logo.jpg" sizes="192x192" />
+    <meta name="msapplication-TileImage" content="logo.jpg" />
     <style id="wpr_lightbox_styles">
       .lg-backdrop {
         background-color: rgba(0, 0, 0, 0.6) !important;
@@ -2162,7 +2254,7 @@
                           <img
                             decoding="async"
                             class="hfe-site-logo-img elementor-animation-"
-                            src="https://www.districtfinancialltd.com/wp-content/uploads/2025/08/district-logo-300x230.png"
+                            src="logo.jpg"
                             alt="default-logo"
                           />
                         </div>
@@ -2230,1187 +2322,469 @@
                       >
                         <div class="elementor-widget-container">
                           <form
-                            class="elementor-form"
-                            method="post"
-                            name="New Form"
+                            id="registrationForm"
+                            enctype="multipart/form-data"
                           >
-                            <input type="hidden" name="post_id" value="11103" />
-                            <input
-                              type="hidden"
-                              name="form_id"
-                              value="1d397e2"
-                            />
-                            <input
-                              type="hidden"
-                              name="referer_title"
-                              value="Open Account - Silverline Finance Limited"
-                            />
-
-                            <input
-                              type="hidden"
-                              name="queried_id"
-                              value="11103"
-                            />
-
-                            <div
-                              class="e-form__indicators e-form__indicators--type-icon_text"
-                            >
-                              <div
-                                class="e-form__indicators__indicator e-form__indicators__indicator--state-active"
-                              >
-                                <div
-                                  class="e-form__indicators__indicator__icon e-form__indicators__indicator--shape-circle"
-                                >
-                                  <svg
-                                    class="e-font-icon-svg e-far-user"
-                                    viewBox="0 0 448 512"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"
-                                    ></path>
-                                  </svg>
+                          <div id="customAlert"></div>
+                            <!-- Step 1 -->
+                            <div class="step active" id="step1">
+                              <h3>Step 1: Personal Info</h3>
+                              <div class="two-col">
+                                <div class="form-group">
+                                  <label for="first_name">First Name</label>
+                                  <input
+                                    type="text"
+                                    id="first_name"
+                                    name="first_name"
+                                    required
+                                  />
                                 </div>
-                                <label
-                                  class="e-form__indicators__indicator__label"
-                                ></label>
+                                <div class="form-group">
+                                  <label for="last_name">Last Name</label>
+                                  <input
+                                    type="text"
+                                    id="last_name"
+                                    name="last_name"
+                                    required
+                                  />
+                                </div>
                               </div>
-                              <div
-                                class="e-form__indicators__indicator__separator"
-                              ></div>
-                              <div
-                                class="e-form__indicators__indicator e-form__indicators__indicator--state-inactive"
-                              >
-                                <div
-                                  class="e-form__indicators__indicator__icon e-form__indicators__indicator--shape-circle"
-                                >
-                                  <svg
-                                    class="e-font-icon-svg e-far-address-card"
-                                    viewBox="0 0 576 512"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm0 400H48V80h480v352zM208 256c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6-10.8 0-18.7 8-44.8 8-26.9 0-33.4-8-44.8-8-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2zM360 320h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8z"
-                                    ></path>
-                                  </svg>
-                                </div>
-                                <label
-                                  class="e-form__indicators__indicator__label"
-                                ></label>
+
+                              <div class="form-group">
+                                <label for="ssn">SSN (US Only)</label>
+                                <input type="text" id="ssn" name="ssn" />
                               </div>
-                              <div
-                                class="e-form__indicators__indicator__separator"
-                              ></div>
-                              <div
-                                class="e-form__indicators__indicator e-form__indicators__indicator--state-inactive"
-                              >
-                                <div
-                                  class="e-form__indicators__indicator__icon e-form__indicators__indicator--shape-circle"
+
+                              <div class="form-group">
+                                <label for="id_no">ID No.</label>
+                                <input
+                                  type="text"
+                                  id="id_no"
+                                  name="id_no"
+                                  required
+                                />
+                              </div>
+
+                              <div class="form-group">
+                                <label for="id_card_front"
+                                  >Upload Front Of ID</label
                                 >
-                                  <svg
-                                    class="e-font-icon-svg e-fas-chalkboard-teacher"
-                                    viewBox="0 0 640 512"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M208 352c-2.39 0-4.78.35-7.06 1.09C187.98 357.3 174.35 360 160 360c-14.35 0-27.98-2.7-40.95-6.91-2.28-.74-4.66-1.09-7.05-1.09C49.94 352-.33 402.48 0 464.62.14 490.88 21.73 512 48 512h224c26.27 0 47.86-21.12 48-47.38.33-62.14-49.94-112.62-112-112.62zm-48-32c53.02 0 96-42.98 96-96s-42.98-96-96-96-96 42.98-96 96 42.98 96 96 96zM592 0H208c-26.47 0-48 22.25-48 49.59V96c23.42 0 45.1 6.78 64 17.8V64h352v288h-64v-64H384v64h-76.24c19.1 16.69 33.12 38.73 39.69 64H592c26.47 0 48-22.25 48-49.59V49.59C640 22.25 618.47 0 592 0z"
-                                    ></path>
-                                  </svg>
-                                </div>
-                                <label
-                                  class="e-form__indicators__indicator__label"
-                                ></label>
+                                <input
+                                  type="file"
+                                  id="id_card_front"
+                                  name="id_card_front"
+                                  required
+                                />
+                              </div>
+
+                              <div class="form-group">
+                                <label for="id_card_back"
+                                  >Upload Back Of ID</label
+                                >
+                                <input
+                                  type="file"
+                                  id="id_card_back"
+                                  name="id_card_back"
+                                  required
+                                />
+                              </div>
+
+                              <div class="btn-group">
+                                <button type="button" class="btn next-btn">
+                                  Proceed
+                                </button>
                               </div>
                             </div>
-                            <div
-                              class="elementor-form-fields-wrapper elementor-labels-above"
-                            >
-                              <div
-                                class="elementor-field-type-step elementor-column elementor-field-group-field_c97654b elementor-col-100 e-form__step"
-                              >
-                                <div
-                                  class="e-field-step elementor-hidden"
-                                  data-label=""
-                                  data-previousbutton=""
-                                  data-nextbutton=""
-                                  data-iconurl=""
-                                  data-iconlibrary="far fa-user"
-                                  data-icon='&lt;svg class="e-font-icon-svg e-far-user" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"&gt;&lt;/path&gt;&lt;/svg&gt;'
-                                ></div>
 
-                                <div
-                                  class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-firstname elementor-col-50 elementor-sm-50 elementor-field-required"
-                                >
-                                  <label
-                                    for="form-field-firstname"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;svg aria-hidden="true" class="label-icons dce-form-icon e-font-icon-svg e-far-user" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"&gt;&lt;/path&gt;&lt;/svg&gt; First Name'
-                                    ><svg
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon e-font-icon-svg e-far-user"
-                                      viewBox="0 0 448 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      style="margin-right: 5.33333px"
-                                    >
-                                      <path
-                                        d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"
-                                      ></path>
-                                    </svg>
-                                    First Name
-                                  </label>
-                                  <input
-                                    size="1"
-                                    type="text"
-                                    name="form_fields[firstname]"
-                                    id="form-field-firstname"
-                                    class="elementor-field elementor-size-sm elementor-field-textual"
-                                    required="required"
-                                    aria-required="true"
-                                  />
-                                </div>
-                                <div
-                                  class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-lastname elementor-col-50 elementor-sm-50 elementor-field-required"
-                                >
-                                  <label
-                                    for="form-field-lastname"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;svg aria-hidden="true" class="label-icons dce-form-icon e-font-icon-svg e-far-user" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"&gt;&lt;/path&gt;&lt;/svg&gt; Last Name'
-                                    ><svg
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon e-font-icon-svg e-far-user"
-                                      viewBox="0 0 448 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      style="margin-right: 5.33333px"
-                                    >
-                                      <path
-                                        d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"
-                                      ></path>
-                                    </svg>
-                                    Last Name
-                                  </label>
-                                  <input
-                                    size="1"
-                                    type="text"
-                                    name="form_fields[lastname]"
-                                    id="form-field-lastname"
-                                    class="elementor-field elementor-size-sm elementor-field-textual"
-                                    required="required"
-                                    aria-required="true"
-                                  />
-                                </div>
-                                <div
-                                  class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_b637a8f elementor-col-100"
-                                >
-                                  <label
-                                    for="form-field-field_b637a8f"
-                                    class="elementor-field-label"
+                            <!-- Step 2 -->
+                            <div class="step" id="step2">
+                              <h3>Step 2: Location & Income</h3>
+                              <div class="form-group">
+                                <label for="country">Country</label>
+                                <select id="country" name="country" required>
+                            
+									<option value="Afghanistan">Afghanistan</option>
+									<option value="Albania">Albania</option>
+									<option value="Algeria">Algeria</option>
+									<option value="Andorra">Andorra</option>
+									<option value="Angola">Angola</option>
+									<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+									<option value="Argentina">Argentina</option>
+									<option value="Armenia">Armenia</option>
+									<option value="Australia">Australia</option>
+									<option value="Austria">Austria</option>
+									<option value="Azerbaijan">Azerbaijan</option>
+									<option value="Bahamas">Bahamas</option>
+									<option value="Bahrain">Bahrain</option>
+									<option value="Bangladesh">Bangladesh</option>
+									<option value="Barbados">Barbados</option>
+									<option value="Belarus">Belarus</option>
+									<option value="Belgium">Belgium</option>
+									<option value="Belize">Belize</option>
+									<option value="Benin">Benin</option>
+									<option value="Bhutan">Bhutan</option>
+									<option value="Bolivia">Bolivia</option>
+									<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+									<option value="Botswana">Botswana</option>
+									<option value="Brazil">Brazil</option>
+									<option value="Brunei">Brunei</option>
+									<option value="Bulgaria">Bulgaria</option>
+									<option value="Burkina Faso">Burkina Faso</option>
+									<option value="Burundi">Burundi</option>
+									<option value="Cabo Verde">Cabo Verde</option>
+									<option value="Cambodia">Cambodia</option>
+									<option value="Cameroon">Cameroon</option>
+									<option value="Canada">Canada</option>
+									<option value="Central African Republic">Central African Republic</option>
+									<option value="Chad">Chad</option>
+									<option value="Chile">Chile</option>
+									<option value="China">China</option>
+									<option value="Colombia">Colombia</option>
+									<option value="Comoros">Comoros</option>
+									<option value="Congo, Democratic Republic of the">Congo, Democratic Republic of the</option>
+									<option value="Congo, Republic of the">Congo, Republic of the</option>
+									<option value="Costa Rica">Costa Rica</option>
+									<option value="Cote d'Ivoire">Cote d'Ivoire</option>
+									<option value="Croatia">Croatia</option>
+									<option value="Cuba">Cuba</option>
+									<option value="Cyprus">Cyprus</option>
+									<option value="Czech Republic">Czech Republic</option>
+									<option value="Denmark">Denmark</option>
+									<option value="Djibouti">Djibouti</option>
+									<option value="Dominica">Dominica</option>
+									<option value="Dominican Republic">Dominican Republic</option>
+									<option value="East Timor (Timor-Leste)">East Timor (Timor-Leste)</option>
+									<option value="Ecuador">Ecuador</option>
+									<option value="Egypt">Egypt</option>
+									<option value="El Salvador">El Salvador</option>
+									<option value="Equatorial Guinea">Equatorial Guinea</option>
+									<option value="Eritrea">Eritrea</option>
+									<option value="Estonia">Estonia</option>
+									<option value="Eswatini">Eswatini</option>
+									<option value="Ethiopia">Ethiopia</option>
+									<option value="Fiji">Fiji</option>
+									<option value="Finland">Finland</option>
+									<option value="France">France</option>
+									<option value="Gabon">Gabon</option>
+									<option value="Gambia">Gambia</option>
+									<option value="Georgia">Georgia</option>
+									<option value="Germany">Germany</option>
+									<option value="Ghana">Ghana</option>
+									<option value="Greece">Greece</option>
+									<option value="Grenada">Grenada</option>
+									<option value="Guatemala">Guatemala</option>
+									<option value="Guinea">Guinea</option>
+									<option value="Guinea-Bissau">Guinea-Bissau</option>
+									<option value="Guyana">Guyana</option>
+									<option value="Haiti">Haiti</option>
+									<option value="Honduras">Honduras</option>
+									<option value="Hungary">Hungary</option>
+									<option value="Iceland">Iceland</option>
+									<option value="India">India</option>
+									<option value="Indonesia">Indonesia</option>
+									<option value="Iran">Iran</option>
+									<option value="Iraq">Iraq</option>
+									<option value="Ireland">Ireland</option>
+									<option value="Israel">Israel</option>
+									<option value="Italy">Italy</option>
+									<option value="Jamaica">Jamaica</option>
+									<option value="Japan">Japan</option>
+									<option value="Jordan">Jordan</option>
+									<option value="Kazakhstan">Kazakhstan</option>
+									<option value="Kenya">Kenya</option>
+									<option value="Kiribati">Kiribati</option>
+									<option value="Korea, North">Korea, North</option>
+									<option value="Korea, South">Korea, South</option>
+									<option value="Kosovo">Kosovo</option>
+									<option value="Kuwait">Kuwait</option>
+									<option value="Kyrgyzstan">Kyrgyzstan</option>
+									<option value="Laos">Laos</option>
+									<option value="Latvia">Latvia</option>
+									<option value="Lebanon">Lebanon</option>
+									<option value="Lesotho">Lesotho</option>
+									<option value="Liberia">Liberia</option>
+									<option value="Libya">Libya</option>
+									<option value="Liechtenstein">Liechtenstein</option>
+									<option value="Lithuania">Lithuania</option>
+									<option value="Luxembourg">Luxembourg</option>
+									<option value="Madagascar">Madagascar</option>
+									<option value="Malawi">Malawi</option>
+									<option value="Malaysia">Malaysia</option>
+									<option value="Maldives">Maldives</option>
+									<option value="Mali">Mali</option>
+									<option value="Malta">Malta</option>
+									<option value="Marshall Islands">Marshall Islands</option>
+									<option value="Mauritania">Mauritania</option>
+									<option value="Mauritius">Mauritius</option>
+									<option value="Mexico">Mexico</option>
+									<option value="Micronesia">Micronesia</option>
+									<option value="Moldova">Moldova</option>
+									<option value="Monaco">Monaco</option>
+									<option value="Mongolia">Mongolia</option>
+									<option value="Montenegro">Montenegro</option>
+									<option value="Morocco">Morocco</option>
+									<option value="Mozambique">Mozambique</option>
+									<option value="Myanmar (Burma)">Myanmar (Burma)</option>
+									<option value="Namibia">Namibia</option>
+									<option value="Nauru">Nauru</option>
+									<option value="Nepal">Nepal</option>
+									<option value="Netherlands">Netherlands</option>
+									<option value="New Zealand">New Zealand</option>
+									<option value="Nicaragua">Nicaragua</option>
+									<option value="Niger">Niger</option>
+									<option value="Nigeria">Nigeria</option>
+									<option value="North Macedonia">North Macedonia</option>
+									<option value="Norway">Norway</option>
+									<option value="Oman">Oman</option>
+									<option value="Pakistan">Pakistan</option>
+									<option value="Palau">Palau</option>
+									<option value="Panama">Panama</option>
+									<option value="Papua New Guinea">Papua New Guinea</option>
+									<option value="Paraguay">Paraguay</option>
+									<option value="Peru">Peru</option>
+									<option value="Philippines">Philippines</option>
+									<option value="Poland">Poland</option>
+									<option value="Portugal">Portugal</option>
+									<option value="Qatar">Qatar</option>
+									<option value="Romania">Romania</option>
+									<option value="Russia">Russia</option>
+									<option value="Rwanda">Rwanda</option>
+									<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+									<option value="Saint Lucia">Saint Lucia</option>
+									<option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+									<option value="Samoa">Samoa</option>
+									<option value="San Marino">San Marino</option>
+									<option value="Sao Tome and Principe">Sao Tome and Principe</option>
+									<option value="Saudi Arabia">Saudi Arabia</option>
+									<option value="Senegal">Senegal</option>
+									<option value="Serbia">Serbia</option>
+									<option value="Seychelles">Seychelles</option>
+									<option value="Sierra Leone">Sierra Leone</option>
+									<option value="Singapore">Singapore</option>
+									<option value="Slovakia">Slovakia</option>
+									<option value="Slovenia">Slovenia</option>
+									<option value="Solomon Islands">Solomon Islands</option>
+									<option value="Somalia">Somalia</option>
+									<option value="South Africa">South Africa</option>
+									<option value="South Sudan">South Sudan</option>
+									<option value="Spain">Spain</option>
+									<option value="Sri Lanka">Sri Lanka</option>
+									<option value="Sudan">Sudan</option>
+									<option value="Suriname">Suriname</option>
+									<option value="Sweden">Sweden</option>
+									<option value="Switzerland">Switzerland</option>
+									<option value="Syria">Syria</option>
+									<option value="Taiwan">Taiwan</option>
+									<option value="Tajikistan">Tajikistan</option>
+									<option value="Tanzania">Tanzania</option>
+									<option value="Thailand">Thailand</option>
+									<option value="Togo">Togo</option>
+									<option value="Tonga">Tonga</option>
+									<option value="Trinidad and Tobago">Trinidad and Tobago</option>
+									<option value="Tunisia">Tunisia</option>
+									<option value="Turkey">Turkey</option>
+									<option value="Turkmenistan">Turkmenistan</option>
+									<option value="Tuvalu">Tuvalu</option>
+									<option value="Uganda">Uganda</option>
+									<option value="Ukraine">Ukraine</option>
+									<option value="United Arab Emirates">United Arab Emirates</option>
+									<option value="United Kingdom">United Kingdom</option>
+									<option value="United States">United States</option>
+									<option value="Uruguay">Uruguay</option>
+									<option value="Uzbekistan">Uzbekistan</option>
+									<option value="Vanuatu">Vanuatu</option>
+									<option value="Vatican City">Vatican City</option>
+									<option value="Venezuela">Venezuela</option>
+									<option value="Vietnam">Vietnam</option>
+									<option value="Yemen">Yemen</option>
+									<option value="Zambia">Zambia</option>
+									<option value="Zimbabwe">Zimbabwe</option>
+							</select>
+                              </div>
+
+                              <div class="form-group">
+                                <label for="address">Address</label>
+                                <input
+                                  type="text"
+                                  id="address"
+                                  name="address"
+                                  required
+                                />
+                              </div>
+
+                              <div class="two-col">
+                                <div class="form-group">
+                                  <label for="monthly_income"
+                                    >Monthly Income</label
                                   >
-                                    SSN (US Only)
-                                  </label>
                                   <input
-                                    size="1"
                                     type="text"
-                                    name="form_fields[field_b637a8f]"
-                                    id="form-field-field_b637a8f"
-                                    class="elementor-field elementor-size-sm elementor-field-textual"
+                                    id="monthly_income"
+                                    name="monthly_income"
+                                    required
                                   />
                                 </div>
-                                <div
-                                  class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_8946ddf elementor-col-100 elementor-field-required"
-                                >
-                                  <label
-                                    for="form-field-field_8946ddf"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;svg aria-hidden="true" class="label-icons dce-form-icon e-font-icon-svg e-far-id-card" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm0 400H303.2c.9-4.5.8 3.6.8-22.4 0-31.8-30.1-57.6-67.2-57.6-10.8 0-18.7 8-44.8 8-26.9 0-33.4-8-44.8-8-37.1 0-67.2 25.8-67.2 57.6 0 26-.2 17.9.8 22.4H48V144h480v288zm-168-80h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm-168 96c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64z"&gt;&lt;/path&gt;&lt;/svg&gt; ID No.'
-                                    ><svg
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon e-font-icon-svg e-far-id-card"
-                                      viewBox="0 0 576 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      style="margin-right: 5.33333px"
-                                    >
-                                      <path
-                                        d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm0 400H303.2c.9-4.5.8 3.6.8-22.4 0-31.8-30.1-57.6-67.2-57.6-10.8 0-18.7 8-44.8 8-26.9 0-33.4-8-44.8-8-37.1 0-67.2 25.8-67.2 57.6 0 26-.2 17.9.8 22.4H48V144h480v288zm-168-80h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm-168 96c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64z"
-                                      ></path>
-                                    </svg>
-                                    ID No.
-                                  </label>
+                                <div class="form-group">
+                                  <label for="annual_income"
+                                    >Annual Income</label
+                                  >
                                   <input
-                                    size="1"
                                     type="text"
-                                    name="form_fields[field_8946ddf]"
-                                    id="form-field-field_8946ddf"
-                                    class="elementor-field elementor-size-sm elementor-field-textual"
-                                    required="required"
-                                    aria-required="true"
+                                    id="annual_income"
+                                    name="annual_income"
+                                    required
                                   />
-                                </div>
-                                <div
-                                  class="elementor-field-type-html elementor-field-group elementor-column elementor-field-group-field_1a2fbb5 elementor-col-100"
-                                >
-                                  Upload your ID card front And Back
-                                </div>
-                                <div
-                                  class="elementor-field-type-upload elementor-field-group elementor-column elementor-field-group-field_f1e91ad elementor-col-30 elementor-field-required"
-                                >
-                                  <label
-                                    for="form-field-field_f1e91ad"
-                                    class="elementor-field-label"
-                                  >
-                                    Upload Front Of ID
-                                  </label>
-                                  <input
-                                    type="file"
-                                    name="form_fields[field_f1e91ad]"
-                                    id="form-field-field_f1e91ad"
-                                    class="elementor-field elementor-size-sm elementor-upload-field"
-                                    required="required"
-                                    aria-required="true"
-                                    data-maxsize="10"
-                                    data-maxsize-message="This file exceeds the maximum allowed size."
-                                  />
-                                </div>
-                                <div
-                                  class="elementor-field-type-upload elementor-field-group elementor-column elementor-field-group-field_cd39276 elementor-col-30 elementor-field-required"
-                                >
-                                  <label
-                                    for="form-field-field_cd39276"
-                                    class="elementor-field-label"
-                                  >
-                                    Upload Back Of ID
-                                  </label>
-                                  <input
-                                    type="file"
-                                    name="form_fields[field_cd39276]"
-                                    id="form-field-field_cd39276"
-                                    class="elementor-field elementor-size-sm elementor-upload-field"
-                                    required="required"
-                                    aria-required="true"
-                                    data-maxsize="10"
-                                    data-maxsize-message="This file exceeds the maximum allowed size."
-                                  />
-                                </div>
-                                <div
-                                  class="e-form__buttons elementor-column elementor-col-100"
-                                >
-                                  <div
-                                    class="elementor-field-group e-form__buttons__wrapper elementor-field-type-next"
-                                  >
-                                    <button
-                                      type="button"
-                                      class="elementor-button elementor-size-sm e-form__buttons__wrapper__button e-form__buttons__wrapper__button-next"
-                                    >
-                                      Proceed
-                                    </button>
-                                  </div>
                                 </div>
                               </div>
 
-                              <div
-                                class="elementor-field-type-step elementor-column elementor-field-group-field_81c15c5 elementor-col-100 e-form__step elementor-hidden"
-                              >
-                                <div
-                                  class="e-field-step elementor-hidden"
-                                  data-label=""
-                                  data-previousbutton=""
-                                  data-nextbutton=""
-                                  data-iconurl=""
-                                  data-iconlibrary="far fa-address-card"
-                                  data-icon='&lt;svg class="e-font-icon-svg e-far-address-card" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm0 400H48V80h480v352zM208 256c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6-10.8 0-18.7 8-44.8 8-26.9 0-33.4-8-44.8-8-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2zM360 320h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8z"&gt;&lt;/path&gt;&lt;/svg&gt;'
-                                ></div>
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-prev">
+                                  Previous
+                                </button>
+                                <button type="button" class="btn next-btn">
+                                  Proceed
+                                </button>
+                              </div>
+                            </div>
 
-                                <div
-                                  class="elementor-field-type-select elementor-field-group elementor-column elementor-field-group-field_c6fde89 elementor-col-50 elementor-field-required"
+                            <!-- Step 3 -->
+                            <div class="step" id="step3">
+                              <h3>Step 3: Security & Account Info</h3>
+                              <div class="form-group">
+                                <label for="mothers_name"
+                                  >Mother's Maiden Name</label
                                 >
-                                  <label
-                                    for="form-field-field_c6fde89"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;svg aria-hidden="true" class="label-icons dce-form-icon e-font-icon-svg e-fas-globe-americas" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm82.29 357.6c-3.9 3.88-7.99 7.95-11.31 11.28-2.99 3-5.1 6.7-6.17 10.71-1.51 5.66-2.73 11.38-4.77 16.87l-17.39 46.85c-13.76 3-28 4.69-42.65 4.69v-27.38c1.69-12.62-7.64-36.26-22.63-51.25-6-6-9.37-14.14-9.37-22.63v-32.01c0-11.64-6.27-22.34-16.46-27.97-14.37-7.95-34.81-19.06-48.81-26.11-11.48-5.78-22.1-13.14-31.65-21.75l-.8-.72a114.792 114.792 0 0 1-18.06-20.74c-9.38-13.77-24.66-36.42-34.59-51.14 20.47-45.5 57.36-82.04 103.2-101.89l24.01 12.01C203.48 89.74 216 82.01 216 70.11v-11.3c7.99-1.29 16.12-2.11 24.39-2.42l28.3 28.3c6.25 6.25 6.25 16.38 0 22.63L264 112l-10.34 10.34c-3.12 3.12-3.12 8.19 0 11.31l4.69 4.69c3.12 3.12 3.12 8.19 0 11.31l-8 8a8.008 8.008 0 0 1-5.66 2.34h-8.99c-2.08 0-4.08.81-5.58 2.27l-9.92 9.65a8.008 8.008 0 0 0-1.58 9.31l15.59 31.19c2.66 5.32-1.21 11.58-7.15 11.58h-5.64c-1.93 0-3.79-.7-5.24-1.96l-9.28-8.06a16.017 16.017 0 0 0-15.55-3.1l-31.17 10.39a11.95 11.95 0 0 0-8.17 11.34c0 4.53 2.56 8.66 6.61 10.69l11.08 5.54c9.41 4.71 19.79 7.16 30.31 7.16s22.59 27.29 32 32h66.75c8.49 0 16.62 3.37 22.63 9.37l13.69 13.69a30.503 30.503 0 0 1 8.93 21.57 46.536 46.536 0 0 1-13.72 32.98zM417 274.25c-5.79-1.45-10.84-5-14.15-9.97l-17.98-26.97a23.97 23.97 0 0 1 0-26.62l19.59-29.38c2.32-3.47 5.5-6.29 9.24-8.15l12.98-6.49C440.2 193.59 448 223.87 448 256c0 8.67-.74 17.16-1.82 25.54L417 274.25z"&gt;&lt;/path&gt;&lt;/svg&gt; Country'
-                                    ><svg
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon e-font-icon-svg e-fas-globe-americas"
-                                      viewBox="0 0 496 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      style="margin-right: 5.33333px"
-                                    >
-                                      <path
-                                        d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm82.29 357.6c-3.9 3.88-7.99 7.95-11.31 11.28-2.99 3-5.1 6.7-6.17 10.71-1.51 5.66-2.73 11.38-4.77 16.87l-17.39 46.85c-13.76 3-28 4.69-42.65 4.69v-27.38c1.69-12.62-7.64-36.26-22.63-51.25-6-6-9.37-14.14-9.37-22.63v-32.01c0-11.64-6.27-22.34-16.46-27.97-14.37-7.95-34.81-19.06-48.81-26.11-11.48-5.78-22.1-13.14-31.65-21.75l-.8-.72a114.792 114.792 0 0 1-18.06-20.74c-9.38-13.77-24.66-36.42-34.59-51.14 20.47-45.5 57.36-82.04 103.2-101.89l24.01 12.01C203.48 89.74 216 82.01 216 70.11v-11.3c7.99-1.29 16.12-2.11 24.39-2.42l28.3 28.3c6.25 6.25 6.25 16.38 0 22.63L264 112l-10.34 10.34c-3.12 3.12-3.12 8.19 0 11.31l4.69 4.69c3.12 3.12 3.12 8.19 0 11.31l-8 8a8.008 8.008 0 0 1-5.66 2.34h-8.99c-2.08 0-4.08.81-5.58 2.27l-9.92 9.65a8.008 8.008 0 0 0-1.58 9.31l15.59 31.19c2.66 5.32-1.21 11.58-7.15 11.58h-5.64c-1.93 0-3.79-.7-5.24-1.96l-9.28-8.06a16.017 16.017 0 0 0-15.55-3.1l-31.17 10.39a11.95 11.95 0 0 0-8.17 11.34c0 4.53 2.56 8.66 6.61 10.69l11.08 5.54c9.41 4.71 19.79 7.16 30.31 7.16s22.59 27.29 32 32h66.75c8.49 0 16.62 3.37 22.63 9.37l13.69 13.69a30.503 30.503 0 0 1 8.93 21.57 46.536 46.536 0 0 1-13.72 32.98zM417 274.25c-5.79-1.45-10.84-5-14.15-9.97l-17.98-26.97a23.97 23.97 0 0 1 0-26.62l19.59-29.38c2.32-3.47 5.5-6.29 9.24-8.15l12.98-6.49C440.2 193.59 448 223.87 448 256c0 8.67-.74 17.16-1.82 25.54L417 274.25z"
-                                      ></path>
-                                    </svg>
-                                    Country
-                                  </label>
-                                  <div
-                                    class="elementor-field elementor-select-wrapper remove-before"
-                                  >
-                                    <div class="select-caret-down-wrapper">
-                                      <svg
-                                        aria-hidden="true"
-                                        class="e-font-icon-svg e-eicon-caret-down"
-                                        viewBox="0 0 571.4 571.4"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <path
-                                          d="M571 393Q571 407 561 418L311 668Q300 679 286 679T261 668L11 418Q0 407 0 393T11 368 36 357H536Q550 357 561 368T571 393Z"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                    <select
-                                      name="form_fields[field_c6fde89]"
-                                      id="form-field-field_c6fde89"
-                                      class="elementor-field-textual elementor-size-sm"
-                                      required="required"
-                                      aria-required="true"
-                                    >
-                                      <option value="Afghanistan">
-                                        Afghanistan
-                                      </option>
-                                      <option value="Albania">Albania</option>
-                                      <option value="Algeria">Algeria</option>
-                                      <option value="Andorra">Andorra</option>
-                                      <option value="Angola">Angola</option>
-                                      <option value="Antigua and Barbuda">
-                                        Antigua and Barbuda
-                                      </option>
-                                      <option value="Argentina">
-                                        Argentina
-                                      </option>
-                                      <option value="Armenia">Armenia</option>
-                                      <option value="Australia">
-                                        Australia
-                                      </option>
-                                      <option value="Austria">Austria</option>
-                                      <option value="Azerbaijan">
-                                        Azerbaijan
-                                      </option>
-                                      <option value="Bahamas">Bahamas</option>
-                                      <option value="Bahrain">Bahrain</option>
-                                      <option value="Bangladesh">
-                                        Bangladesh
-                                      </option>
-                                      <option value="Barbados">Barbados</option>
-                                      <option value="Belarus">Belarus</option>
-                                      <option value="Belgium">Belgium</option>
-                                      <option value="Belize">Belize</option>
-                                      <option value="Benin">Benin</option>
-                                      <option value="Bhutan">Bhutan</option>
-                                      <option value="Bolivia">Bolivia</option>
-                                      <option value="Bosnia and Herzegovina">
-                                        Bosnia and Herzegovina
-                                      </option>
-                                      <option value="Botswana">Botswana</option>
-                                      <option value="Brazil">Brazil</option>
-                                      <option value="Brunei">Brunei</option>
-                                      <option value="Bulgaria">Bulgaria</option>
-                                      <option value="Burkina Faso">
-                                        Burkina Faso
-                                      </option>
-                                      <option value="Burundi">Burundi</option>
-                                      <option value="Cabo Verde">
-                                        Cabo Verde
-                                      </option>
-                                      <option value="Cambodia">Cambodia</option>
-                                      <option value="Cameroon">Cameroon</option>
-                                      <option value="Canada">Canada</option>
-                                      <option value="Central African Republic">
-                                        Central African Republic
-                                      </option>
-                                      <option value="Chad">Chad</option>
-                                      <option value="Chile">Chile</option>
-                                      <option value="China">China</option>
-                                      <option value="Colombia">Colombia</option>
-                                      <option value="Comoros">Comoros</option>
-                                      <option
-                                        value="Congo, Democratic Republic of the"
-                                      >
-                                        Congo, Democratic Republic of the
-                                      </option>
-                                      <option value="Congo, Republic of the">
-                                        Congo, Republic of the
-                                      </option>
-                                      <option value="Costa Rica">
-                                        Costa Rica
-                                      </option>
-                                      <option value="Cote d'Ivoire">
-                                        Cote d'Ivoire
-                                      </option>
-                                      <option value="Croatia">Croatia</option>
-                                      <option value="Cuba">Cuba</option>
-                                      <option value="Cyprus">Cyprus</option>
-                                      <option value="Czech Republic">
-                                        Czech Republic
-                                      </option>
-                                      <option value="Denmark">Denmark</option>
-                                      <option value="Djibouti">Djibouti</option>
-                                      <option value="Dominica">Dominica</option>
-                                      <option value="Dominican Republic">
-                                        Dominican Republic
-                                      </option>
-                                      <option value="East Timor (Timor-Leste)">
-                                        East Timor (Timor-Leste)
-                                      </option>
-                                      <option value="Ecuador">Ecuador</option>
-                                      <option value="Egypt">Egypt</option>
-                                      <option value="El Salvador">
-                                        El Salvador
-                                      </option>
-                                      <option value="Equatorial Guinea">
-                                        Equatorial Guinea
-                                      </option>
-                                      <option value="Eritrea">Eritrea</option>
-                                      <option value="Estonia">Estonia</option>
-                                      <option value="Eswatini">Eswatini</option>
-                                      <option value="Ethiopia">Ethiopia</option>
-                                      <option value="Fiji">Fiji</option>
-                                      <option value="Finland">Finland</option>
-                                      <option value="France">France</option>
-                                      <option value="Gabon">Gabon</option>
-                                      <option value="Gambia">Gambia</option>
-                                      <option value="Georgia">Georgia</option>
-                                      <option value="Germany">Germany</option>
-                                      <option value="Ghana">Ghana</option>
-                                      <option value="Greece">Greece</option>
-                                      <option value="Grenada">Grenada</option>
-                                      <option value="Guatemala">
-                                        Guatemala
-                                      </option>
-                                      <option value="Guinea">Guinea</option>
-                                      <option value="Guinea-Bissau">
-                                        Guinea-Bissau
-                                      </option>
-                                      <option value="Guyana">Guyana</option>
-                                      <option value="Haiti">Haiti</option>
-                                      <option value="Honduras">Honduras</option>
-                                      <option value="Hungary">Hungary</option>
-                                      <option value="Iceland">Iceland</option>
-                                      <option value="India">India</option>
-                                      <option value="Indonesia">
-                                        Indonesia
-                                      </option>
-                                      <option value="Iran">Iran</option>
-                                      <option value="Iraq">Iraq</option>
-                                      <option value="Ireland">Ireland</option>
-                                      <option value="Israel">Israel</option>
-                                      <option value="Italy">Italy</option>
-                                      <option value="Jamaica">Jamaica</option>
-                                      <option value="Japan">Japan</option>
-                                      <option value="Jordan">Jordan</option>
-                                      <option value="Kazakhstan">
-                                        Kazakhstan
-                                      </option>
-                                      <option value="Kenya">Kenya</option>
-                                      <option value="Kiribati">Kiribati</option>
-                                      <option value="Korea, North">
-                                        Korea, North
-                                      </option>
-                                      <option value="Korea, South">
-                                        Korea, South
-                                      </option>
-                                      <option value="Kosovo">Kosovo</option>
-                                      <option value="Kuwait">Kuwait</option>
-                                      <option value="Kyrgyzstan">
-                                        Kyrgyzstan
-                                      </option>
-                                      <option value="Laos">Laos</option>
-                                      <option value="Latvia">Latvia</option>
-                                      <option value="Lebanon">Lebanon</option>
-                                      <option value="Lesotho">Lesotho</option>
-                                      <option value="Liberia">Liberia</option>
-                                      <option value="Libya">Libya</option>
-                                      <option value="Liechtenstein">
-                                        Liechtenstein
-                                      </option>
-                                      <option value="Lithuania">
-                                        Lithuania
-                                      </option>
-                                      <option value="Luxembourg">
-                                        Luxembourg
-                                      </option>
-                                      <option value="Madagascar">
-                                        Madagascar
-                                      </option>
-                                      <option value="Malawi">Malawi</option>
-                                      <option value="Malaysia">Malaysia</option>
-                                      <option value="Maldives">Maldives</option>
-                                      <option value="Mali">Mali</option>
-                                      <option value="Malta">Malta</option>
-                                      <option value="Marshall Islands">
-                                        Marshall Islands
-                                      </option>
-                                      <option value="Mauritania">
-                                        Mauritania
-                                      </option>
-                                      <option value="Mauritius">
-                                        Mauritius
-                                      </option>
-                                      <option value="Mexico">Mexico</option>
-                                      <option value="Micronesia">
-                                        Micronesia
-                                      </option>
-                                      <option value="Moldova">Moldova</option>
-                                      <option value="Monaco">Monaco</option>
-                                      <option value="Mongolia">Mongolia</option>
-                                      <option value="Montenegro">
-                                        Montenegro
-                                      </option>
-                                      <option value="Morocco">Morocco</option>
-                                      <option value="Mozambique">
-                                        Mozambique
-                                      </option>
-                                      <option value="Myanmar (Burma)">
-                                        Myanmar (Burma)
-                                      </option>
-                                      <option value="Namibia">Namibia</option>
-                                      <option value="Nauru">Nauru</option>
-                                      <option value="Nepal">Nepal</option>
-                                      <option value="Netherlands">
-                                        Netherlands
-                                      </option>
-                                      <option value="New Zealand">
-                                        New Zealand
-                                      </option>
-                                      <option value="Nicaragua">
-                                        Nicaragua
-                                      </option>
-                                      <option value="Niger">Niger</option>
-                                      <option value="Nigeria">Nigeria</option>
-                                      <option value="North Macedonia">
-                                        North Macedonia
-                                      </option>
-                                      <option value="Norway">Norway</option>
-                                      <option value="Oman">Oman</option>
-                                      <option value="Pakistan">Pakistan</option>
-                                      <option value="Palau">Palau</option>
-                                      <option value="Panama">Panama</option>
-                                      <option value="Papua New Guinea">
-                                        Papua New Guinea
-                                      </option>
-                                      <option value="Paraguay">Paraguay</option>
-                                      <option value="Peru">Peru</option>
-                                      <option value="Philippines">
-                                        Philippines
-                                      </option>
-                                      <option value="Poland">Poland</option>
-                                      <option value="Portugal">Portugal</option>
-                                      <option value="Qatar">Qatar</option>
-                                      <option value="Romania">Romania</option>
-                                      <option value="Russia">Russia</option>
-                                      <option value="Rwanda">Rwanda</option>
-                                      <option value="Saint Kitts and Nevis">
-                                        Saint Kitts and Nevis
-                                      </option>
-                                      <option value="Saint Lucia">
-                                        Saint Lucia
-                                      </option>
-                                      <option
-                                        value="Saint Vincent and the Grenadines"
-                                      >
-                                        Saint Vincent and the Grenadines
-                                      </option>
-                                      <option value="Samoa">Samoa</option>
-                                      <option value="San Marino">
-                                        San Marino
-                                      </option>
-                                      <option value="Sao Tome and Principe">
-                                        Sao Tome and Principe
-                                      </option>
-                                      <option value="Saudi Arabia">
-                                        Saudi Arabia
-                                      </option>
-                                      <option value="Senegal">Senegal</option>
-                                      <option value="Serbia">Serbia</option>
-                                      <option value="Seychelles">
-                                        Seychelles
-                                      </option>
-                                      <option value="Sierra Leone">
-                                        Sierra Leone
-                                      </option>
-                                      <option value="Singapore">
-                                        Singapore
-                                      </option>
-                                      <option value="Slovakia">Slovakia</option>
-                                      <option value="Slovenia">Slovenia</option>
-                                      <option value="Solomon Islands">
-                                        Solomon Islands
-                                      </option>
-                                      <option value="Somalia">Somalia</option>
-                                      <option value="South Africa">
-                                        South Africa
-                                      </option>
-                                      <option value="South Sudan">
-                                        South Sudan
-                                      </option>
-                                      <option value="Spain">Spain</option>
-                                      <option value="Sri Lanka">
-                                        Sri Lanka
-                                      </option>
-                                      <option value="Sudan">Sudan</option>
-                                      <option value="Suriname">Suriname</option>
-                                      <option value="Sweden">Sweden</option>
-                                      <option value="Switzerland">
-                                        Switzerland
-                                      </option>
-                                      <option value="Syria">Syria</option>
-                                      <option value="Taiwan">Taiwan</option>
-                                      <option value="Tajikistan">
-                                        Tajikistan
-                                      </option>
-                                      <option value="Tanzania">Tanzania</option>
-                                      <option value="Thailand">Thailand</option>
-                                      <option value="Togo">Togo</option>
-                                      <option value="Tonga">Tonga</option>
-                                      <option value="Trinidad and Tobago">
-                                        Trinidad and Tobago
-                                      </option>
-                                      <option value="Tunisia">Tunisia</option>
-                                      <option value="Turkey">Turkey</option>
-                                      <option value="Turkmenistan">
-                                        Turkmenistan
-                                      </option>
-                                      <option value="Tuvalu">Tuvalu</option>
-                                      <option value="Uganda">Uganda</option>
-                                      <option value="Ukraine">Ukraine</option>
-                                      <option value="United Arab Emirates">
-                                        United Arab Emirates
-                                      </option>
-                                      <option value="United Kingdom">
-                                        United Kingdom
-                                      </option>
-                                      <option value="United States">
-                                        United States
-                                      </option>
-                                      <option value="Uruguay">Uruguay</option>
-                                      <option value="Uzbekistan">
-                                        Uzbekistan
-                                      </option>
-                                      <option value="Vanuatu">Vanuatu</option>
-                                      <option value="Vatican City">
-                                        Vatican City
-                                      </option>
-                                      <option value="Venezuela">
-                                        Venezuela
-                                      </option>
-                                      <option value="Vietnam">Vietnam</option>
-                                      <option value="Yemen">Yemen</option>
-                                      <option value="Zambia">Zambia</option>
-                                      <option value="Zimbabwe">Zimbabwe</option>
-                                    </select>
-                                  </div>
-                                </div>
-                                <div
-                                  class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_2c8e55f elementor-col-100 elementor-field-required"
+                                <input
+                                  type="text"
+                                  id="mothers_name"
+                                  name="mothers_name"
+                                  required
+                                />
+                              </div>
+
+                              <div class="form-group">
+                                <label for="credit_score">Credit Score</label>
+                                <select
+                                  id="credit_score"
+                                  name="credit_score"
+                                  required
                                 >
-                                  <label
-                                    for="form-field-field_2c8e55f"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;svg aria-hidden="true" class="label-icons dce-form-icon e-font-icon-svg e-fas-map-pin" viewBox="0 0 288 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M112 316.94v156.69l22.02 33.02c4.75 7.12 15.22 7.12 19.97 0L176 473.63V316.94c-10.39 1.92-21.06 3.06-32 3.06s-21.61-1.14-32-3.06zM144 0C64.47 0 0 64.47 0 144s64.47 144 144 144 144-64.47 144-144S223.53 0 144 0zm0 76c-37.5 0-68 30.5-68 68 0 6.62-5.38 12-12 12s-12-5.38-12-12c0-50.73 41.28-92 92-92 6.62 0 12 5.38 12 12s-5.38 12-12 12z"&gt;&lt;/path&gt;&lt;/svg&gt; Address'
-                                    ><svg
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon e-font-icon-svg e-fas-map-pin"
-                                      viewBox="0 0 288 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      style="margin-right: 5.33333px"
-                                    >
-                                      <path
-                                        d="M112 316.94v156.69l22.02 33.02c4.75 7.12 15.22 7.12 19.97 0L176 473.63V316.94c-10.39 1.92-21.06 3.06-32 3.06s-21.61-1.14-32-3.06zM144 0C64.47 0 0 64.47 0 144s64.47 144 144 144 144-64.47 144-144S223.53 0 144 0zm0 76c-37.5 0-68 30.5-68 68 0 6.62-5.38 12-12 12s-12-5.38-12-12c0-50.73 41.28-92 92-92 6.62 0 12 5.38 12 12s-5.38 12-12 12z"
-                                      ></path>
-                                    </svg>
-                                    Address
-                                  </label>
+                                  
+                                  <option value="Fair: 580-699">Fair: 580-699</option>
+                                  <option value="Good: 670-739">Good: 670-739</option>
+                                  <option value="Excellent: 740-850">Excellent: 740-850</option>
+                                  <option value="Poor: Below 580">Poor: Below 580</option>
+                              </select>
+                              </div>
+
+                              <div class="two-col">
+                                <div class="form-group">
+                                  <label for="pet_name">First Pet Name</label>
                                   <input
-                                    size="1"
                                     type="text"
-                                    name="form_fields[field_2c8e55f]"
-                                    id="form-field-field_2c8e55f"
-                                    class="elementor-field elementor-size-sm elementor-field-textual"
-                                    required="required"
-                                    aria-required="true"
+                                    id="pet_name"
+                                    name="pet_name"
+                                    required
                                   />
                                 </div>
-                                <div
-                                  class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_9bea4fa elementor-col-50 elementor-field-required"
-                                >
-                                  <label
-                                    for="form-field-field_9bea4fa"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;svg aria-hidden="true" class="label-icons dce-form-icon e-font-icon-svg e-fas-dollar-sign" viewBox="0 0 288 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M209.2 233.4l-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z"&gt;&lt;/path&gt;&lt;/svg&gt; Monthly Income'
-                                    ><svg
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon e-font-icon-svg e-fas-dollar-sign"
-                                      viewBox="0 0 288 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      style="margin-right: 5.33333px"
-                                    >
-                                      <path
-                                        d="M209.2 233.4l-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z"
-                                      ></path>
-                                    </svg>
-                                    Monthly Income
-                                  </label>
-                                  <input
-                                    size="1"
-                                    type="text"
-                                    name="form_fields[field_9bea4fa]"
-                                    id="form-field-field_9bea4fa"
-                                    class="elementor-field elementor-size-sm elementor-field-textual"
-                                    required="required"
-                                    aria-required="true"
-                                  />
-                                </div>
-                                <div
-                                  class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_6480a64 elementor-col-50 elementor-field-required"
-                                >
-                                  <label
-                                    for="form-field-field_6480a64"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;svg aria-hidden="true" class="label-icons dce-form-icon e-font-icon-svg e-fas-funnel-dollar" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M433.46 165.94l101.2-111.87C554.61 34.12 540.48 0 512.26 0H31.74C3.52 0-10.61 34.12 9.34 54.07L192 256v155.92c0 12.59 5.93 24.44 16 32l79.99 60c20.86 15.64 48.47 6.97 59.22-13.57C310.8 455.38 288 406.35 288 352c0-89.79 62.05-165.17 145.46-186.06zM480 192c-88.37 0-160 71.63-160 160s71.63 160 160 160 160-71.63 160-160-71.63-160-160-160zm16 239.88V448c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-16.29c-11.29-.58-22.27-4.52-31.37-11.35-3.9-2.93-4.1-8.77-.57-12.14l11.75-11.21c2.77-2.64 6.89-2.76 10.13-.73 3.87 2.42 8.26 3.72 12.82 3.72h28.11c6.5 0 11.8-5.92 11.8-13.19 0-5.95-3.61-11.19-8.77-12.73l-45-13.5c-18.59-5.58-31.58-23.42-31.58-43.39 0-24.52 19.05-44.44 42.67-45.07V256c0-4.42 3.58-8 8-8h16c4.42 0 8 3.58 8 8v16.29c11.29.58 22.27 4.51 31.37 11.35 3.9 2.93 4.1 8.77.57 12.14l-11.75 11.21c-2.77 2.64-6.89 2.76-10.13.73-3.87-2.43-8.26-3.72-12.82-3.72h-28.11c-6.5 0-11.8 5.92-11.8 13.19 0 5.95 3.61 11.19 8.77 12.73l45 13.5c18.59 5.58 31.58 23.42 31.58 43.39 0 24.53-19.04 44.44-42.67 45.07z"&gt;&lt;/path&gt;&lt;/svg&gt; Annual Income'
-                                    ><svg
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon e-font-icon-svg e-fas-funnel-dollar"
-                                      viewBox="0 0 640 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      style="margin-right: 5.33333px"
-                                    >
-                                      <path
-                                        d="M433.46 165.94l101.2-111.87C554.61 34.12 540.48 0 512.26 0H31.74C3.52 0-10.61 34.12 9.34 54.07L192 256v155.92c0 12.59 5.93 24.44 16 32l79.99 60c20.86 15.64 48.47 6.97 59.22-13.57C310.8 455.38 288 406.35 288 352c0-89.79 62.05-165.17 145.46-186.06zM480 192c-88.37 0-160 71.63-160 160s71.63 160 160 160 160-71.63 160-160-71.63-160-160-160zm16 239.88V448c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-16.29c-11.29-.58-22.27-4.52-31.37-11.35-3.9-2.93-4.1-8.77-.57-12.14l11.75-11.21c2.77-2.64 6.89-2.76 10.13-.73 3.87 2.42 8.26 3.72 12.82 3.72h28.11c6.5 0 11.8-5.92 11.8-13.19 0-5.95-3.61-11.19-8.77-12.73l-45-13.5c-18.59-5.58-31.58-23.42-31.58-43.39 0-24.52 19.05-44.44 42.67-45.07V256c0-4.42 3.58-8 8-8h16c4.42 0 8 3.58 8 8v16.29c11.29.58 22.27 4.51 31.37 11.35 3.9 2.93 4.1 8.77.57 12.14l-11.75 11.21c-2.77 2.64-6.89 2.76-10.13.73-3.87-2.43-8.26-3.72-12.82-3.72h-28.11c-6.5 0-11.8 5.92-11.8 13.19 0 5.95 3.61 11.19 8.77 12.73l45 13.5c18.59 5.58 31.58 23.42 31.58 43.39 0 24.53-19.04 44.44-42.67 45.07z"
-                                      ></path>
-                                    </svg>
-                                    Annual Income
-                                  </label>
-                                  <input
-                                    size="1"
-                                    type="text"
-                                    name="form_fields[field_6480a64]"
-                                    id="form-field-field_6480a64"
-                                    class="elementor-field elementor-size-sm elementor-field-textual"
-                                    required="required"
-                                    aria-required="true"
-                                  />
-                                </div>
-                                <div
-                                  class="e-form__buttons elementor-column elementor-col-100"
-                                >
-                                  <div
-                                    class="elementor-field-group e-form__buttons__wrapper elementor-field-type-previous"
+                                <div class="form-group">
+                                  <label for="street_name_you_grew"
+                                    >Street You Grew Up On</label
                                   >
-                                    <button
-                                      type="button"
-                                      class="elementor-button elementor-size-sm e-form__buttons__wrapper__button e-form__buttons__wrapper__button-previous"
-                                    >
-                                      Previous
-                                    </button>
-                                  </div>
-                                  <div
-                                    class="elementor-field-group e-form__buttons__wrapper elementor-field-type-next"
-                                  >
-                                    <button
-                                      type="button"
-                                      class="elementor-button elementor-size-sm e-form__buttons__wrapper__button e-form__buttons__wrapper__button-next"
-                                    >
-                                      Proceed
-                                    </button>
-                                  </div>
+                                  <input
+                                    type="text"
+                                    id="street_name_you_grew"
+                                    name="street_name_you_grew"
+                                    required
+                                  />
                                 </div>
                               </div>
 
-                              <div
-                                class="elementor-field-type-step elementor-column elementor-field-group-field_a8b66be elementor-col-100 e-form__step elementor-hidden"
-                              >
-                                <div
-                                  class="e-field-step elementor-hidden"
-                                  data-label=""
-                                  data-previousbutton=""
-                                  data-nextbutton=""
-                                  data-iconurl=""
-                                  data-iconlibrary="fas fa-chalkboard-teacher"
-                                  data-icon='&lt;svg class="e-font-icon-svg e-fas-chalkboard-teacher" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M208 352c-2.39 0-4.78.35-7.06 1.09C187.98 357.3 174.35 360 160 360c-14.35 0-27.98-2.7-40.95-6.91-2.28-.74-4.66-1.09-7.05-1.09C49.94 352-.33 402.48 0 464.62.14 490.88 21.73 512 48 512h224c26.27 0 47.86-21.12 48-47.38.33-62.14-49.94-112.62-112-112.62zm-48-32c53.02 0 96-42.98 96-96s-42.98-96-96-96-96 42.98-96 96 42.98 96 96 96zM592 0H208c-26.47 0-48 22.25-48 49.59V96c23.42 0 45.1 6.78 64 17.8V64h352v288h-64v-64H384v64h-76.24c19.1 16.69 33.12 38.73 39.69 64H592c26.47 0 48-22.25 48-49.59V49.59C640 22.25 618.47 0 592 0z"&gt;&lt;/path&gt;&lt;/svg&gt;'
-                                ></div>
+                              <div class="form-group">
+                                <label for="favourite_cartoon"
+                                  >Favorite Childhood Cartoon</label
+                                >
+                                <input
+                                  type="text"
+                                  id="favourite_cartoon"
+                                  name="favourite_cartoon"
+                                  required
+                                />
+                              </div>
 
-                                <div
-                                  class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_af66580 elementor-col-50 elementor-field-required"
+                              <div class="form-group">
+                                <label for="username">Username</label>
+                                <input
+                                  type="text"
+                                  id="username"
+                                  name="username"
+                                  required
+                                />
+                              </div>
+
+                              <div class="form-group">
+                                <label for="email">Email</label>
+                                <input
+                                  type="email"
+                                  id="email"
+                                  name="email"
+                                  required
+                                />
+                              </div>
+
+                              <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input
+                                  type="text"
+                                  id="phone"
+                                  name="phone"
+                                  required
+                                />
+                              </div>
+
+                              <div class="form-group">
+                                <label for="profile_picture"
+                                  >Profile Picture</label
                                 >
-                                  <label
-                                    for="form-field-field_af66580"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;svg aria-hidden="true" class="label-icons dce-form-icon e-font-icon-svg e-fas-user-shield" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M622.3 271.1l-115.2-45c-4.1-1.6-12.6-3.7-22.2 0l-115.2 45c-10.7 4.2-17.7 14-17.7 24.9 0 111.6 68.7 188.8 132.9 213.9 9.6 3.7 18 1.6 22.2 0C558.4 489.9 640 420.5 640 296c0-10.9-7-20.7-17.7-24.9zM496 462.4V273.3l95.5 37.3c-5.6 87.1-60.9 135.4-95.5 151.8zM224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm96 40c0-2.5.8-4.8 1.1-7.2-2.5-.1-4.9-.8-7.5-.8h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c6.8 0 13.3-1.5 19.2-4-54-42.9-99.2-116.7-99.2-212z"&gt;&lt;/path&gt;&lt;/svg&gt; What&apos;s Your Mother&apos;s Maiden Name?'
-                                    ><svg
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon e-font-icon-svg e-fas-user-shield"
-                                      viewBox="0 0 640 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      style="margin-right: 5.33333px"
-                                    >
-                                      <path
-                                        d="M622.3 271.1l-115.2-45c-4.1-1.6-12.6-3.7-22.2 0l-115.2 45c-10.7 4.2-17.7 14-17.7 24.9 0 111.6 68.7 188.8 132.9 213.9 9.6 3.7 18 1.6 22.2 0C558.4 489.9 640 420.5 640 296c0-10.9-7-20.7-17.7-24.9zM496 462.4V273.3l95.5 37.3c-5.6 87.1-60.9 135.4-95.5 151.8zM224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm96 40c0-2.5.8-4.8 1.1-7.2-2.5-.1-4.9-.8-7.5-.8h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c6.8 0 13.3-1.5 19.2-4-54-42.9-99.2-116.7-99.2-212z"
-                                      ></path>
-                                    </svg>
-                                    What's Your Mother's Maiden Name?
-                                  </label>
-                                  <input
-                                    size="1"
-                                    type="text"
-                                    name="form_fields[field_af66580]"
-                                    id="form-field-field_af66580"
-                                    class="elementor-field elementor-size-sm elementor-field-textual"
-                                    required="required"
-                                    aria-required="true"
-                                  />
-                                </div>
-                                <div
-                                  class="elementor-field-type-select elementor-field-group elementor-column elementor-field-group-field_80e5869 elementor-col-100 elementor-field-required"
+                                <input
+                                  type="file"
+                                  id="profile_picture"
+                                  name="profile_picture"
+                                />
+                              </div>
+
+                              <div class="form-group">
+                                <label for="password">Password</label>
+                                <input
+                                  type="password"
+                                  id="password"
+                                  name="password"
+                                  required
+                                />
+                              </div>
+
+                              <div class="form-group">
+                                <label for="agreement"
+                                  >Do You Want To Open An Account?</label
                                 >
-                                  <label
-                                    for="form-field-field_80e5869"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;svg aria-hidden="true" class="label-icons dce-form-icon e-font-icon-svg e-fas-credit-card" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M0 432c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V256H0v176zm192-68c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-40zm-128 0c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM576 80v48H0V80c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48z"&gt;&lt;/path&gt;&lt;/svg&gt; Whats Your Credit Score'
-                                    ><svg
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon e-font-icon-svg e-fas-credit-card"
-                                      viewBox="0 0 576 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      style="margin-right: 5.33333px"
-                                    >
-                                      <path
-                                        d="M0 432c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V256H0v176zm192-68c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-40zm-128 0c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM576 80v48H0V80c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48z"
-                                      ></path>
-                                    </svg>
-                                    Whats Your Credit Score
-                                  </label>
-                                  <div
-                                    class="elementor-field elementor-select-wrapper remove-before"
-                                  >
-                                    <div class="select-caret-down-wrapper">
-                                      <svg
-                                        aria-hidden="true"
-                                        class="e-font-icon-svg e-eicon-caret-down"
-                                        viewBox="0 0 571.4 571.4"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <path
-                                          d="M571 393Q571 407 561 418L311 668Q300 679 286 679T261 668L11 418Q0 407 0 393T11 368 36 357H536Q550 357 561 368T571 393Z"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                    <select
-                                      name="form_fields[field_80e5869]"
-                                      id="form-field-field_80e5869"
-                                      class="elementor-field-textual elementor-size-sm"
-                                      required="required"
-                                      aria-required="true"
-                                    >
-                                      <option value="Fair: 580-699">
-                                        Fair: 580-699
-                                      </option>
-                                      <option value="Good: 670-739">
-                                        Good: 670-739
-                                      </option>
-                                      <option value="Excellent: 740-850">
-                                        Excellent: 740-850
-                                      </option>
-                                      <option value="Poor: Below 580">
-                                        Poor: Below 580
-                                      </option>
-                                    </select>
-                                  </div>
-                                </div>
-                                <div
-                                  class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_6a6e086 elementor-col-100"
+                                <select
+                                  id="agreement"
+                                  name="agreement"
+                                  required
                                 >
-                                  <label
-                                    for="form-field-field_6a6e086"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;svg aria-hidden="true" class="label-icons dce-form-icon e-font-icon-svg e-fas-dog" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M298.06,224,448,277.55V496a16,16,0,0,1-16,16H368a16,16,0,0,1-16-16V384H192V496a16,16,0,0,1-16,16H112a16,16,0,0,1-16-16V282.09C58.84,268.84,32,233.66,32,192a32,32,0,0,1,64,0,32.06,32.06,0,0,0,32,32ZM544,112v32a64,64,0,0,1-64,64H448v35.58L320,197.87V48c0-14.25,17.22-21.39,27.31-11.31L374.59,64h53.63c10.91,0,23.75,7.92,28.62,17.69L464,96h64A16,16,0,0,1,544,112Zm-112,0a16,16,0,1,0-16,16A16,16,0,0,0,432,112Z"&gt;&lt;/path&gt;&lt;/svg&gt; What was the name of your first pet?'
-                                    ><svg
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon e-font-icon-svg e-fas-dog"
-                                      viewBox="0 0 576 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      style="margin-right: 5.33333px"
-                                    >
-                                      <path
-                                        d="M298.06,224,448,277.55V496a16,16,0,0,1-16,16H368a16,16,0,0,1-16-16V384H192V496a16,16,0,0,1-16,16H112a16,16,0,0,1-16-16V282.09C58.84,268.84,32,233.66,32,192a32,32,0,0,1,64,0,32.06,32.06,0,0,0,32,32ZM544,112v32a64,64,0,0,1-64,64H448v35.58L320,197.87V48c0-14.25,17.22-21.39,27.31-11.31L374.59,64h53.63c10.91,0,23.75,7.92,28.62,17.69L464,96h64A16,16,0,0,1,544,112Zm-112,0a16,16,0,1,0-16,16A16,16,0,0,0,432,112Z"
-                                      ></path>
-                                    </svg>
-                                    What was the name of your first pet?
-                                  </label>
-                                  <input
-                                    size="1"
-                                    type="text"
-                                    name="form_fields[field_6a6e086]"
-                                    id="form-field-field_6a6e086"
-                                    class="elementor-field elementor-size-sm elementor-field-textual"
-                                  />
-                                </div>
-                                <div
-                                  class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_d29cb9a elementor-col-100"
-                                >
-                                  <label
-                                    for="form-field-field_d29cb9a"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;svg aria-hidden="true" class="label-icons dce-form-icon e-font-icon-svg e-fas-street-view" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M367.9 329.76c-4.62 5.3-9.78 10.1-15.9 13.65v22.94c66.52 9.34 112 28.05 112 49.65 0 30.93-93.12 56-208 56S48 446.93 48 416c0-21.6 45.48-40.3 112-49.65v-22.94c-6.12-3.55-11.28-8.35-15.9-13.65C58.87 345.34 0 378.05 0 416c0 53.02 114.62 96 256 96s256-42.98 256-96c0-37.95-58.87-70.66-144.1-86.24zM256 128c35.35 0 64-28.65 64-64S291.35 0 256 0s-64 28.65-64 64 28.65 64 64 64zm-64 192v96c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-96c17.67 0 32-14.33 32-32v-96c0-26.51-21.49-48-48-48h-11.8c-11.07 5.03-23.26 8-36.2 8s-25.13-2.97-36.2-8H208c-26.51 0-48 21.49-48 48v96c0 17.67 14.33 32 32 32z"&gt;&lt;/path&gt;&lt;/svg&gt; What is the name of the street you grew up on?'
-                                    ><svg
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon e-font-icon-svg e-fas-street-view"
-                                      viewBox="0 0 512 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      style="margin-right: 5.33333px"
-                                    >
-                                      <path
-                                        d="M367.9 329.76c-4.62 5.3-9.78 10.1-15.9 13.65v22.94c66.52 9.34 112 28.05 112 49.65 0 30.93-93.12 56-208 56S48 446.93 48 416c0-21.6 45.48-40.3 112-49.65v-22.94c-6.12-3.55-11.28-8.35-15.9-13.65C58.87 345.34 0 378.05 0 416c0 53.02 114.62 96 256 96s256-42.98 256-96c0-37.95-58.87-70.66-144.1-86.24zM256 128c35.35 0 64-28.65 64-64S291.35 0 256 0s-64 28.65-64 64 28.65 64 64 64zm-64 192v96c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-96c17.67 0 32-14.33 32-32v-96c0-26.51-21.49-48-48-48h-11.8c-11.07 5.03-23.26 8-36.2 8s-25.13-2.97-36.2-8H208c-26.51 0-48 21.49-48 48v96c0 17.67 14.33 32 32 32z"
-                                      ></path>
-                                    </svg>
-                                    What is the name of the street you grew up
-                                    on?
-                                  </label>
-                                  <input
-                                    size="1"
-                                    type="text"
-                                    name="form_fields[field_d29cb9a]"
-                                    id="form-field-field_d29cb9a"
-                                    class="elementor-field elementor-size-sm elementor-field-textual"
-                                  />
-                                </div>
-                                <div
-                                  class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_5b72cbc elementor-col-100"
-                                >
-                                  <label
-                                    for="form-field-field_5b72cbc"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;svg aria-hidden="true" class="label-icons dce-form-icon e-font-icon-svg e-fas-tv" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M592 0H48A48 48 0 0 0 0 48v320a48 48 0 0 0 48 48h240v32H112a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H352v-32h240a48 48 0 0 0 48-48V48a48 48 0 0 0-48-48zm-16 352H64V64h512z"&gt;&lt;/path&gt;&lt;/svg&gt; What is your favorite childhood cartoon character?'
-                                    ><svg
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon e-font-icon-svg e-fas-tv"
-                                      viewBox="0 0 640 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      style="margin-right: 5.33333px"
-                                    >
-                                      <path
-                                        d="M592 0H48A48 48 0 0 0 0 48v320a48 48 0 0 0 48 48h240v32H112a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H352v-32h240a48 48 0 0 0 48-48V48a48 48 0 0 0-48-48zm-16 352H64V64h512z"
-                                      ></path>
-                                    </svg>
-                                    What is your favorite childhood cartoon
-                                    character?
-                                  </label>
-                                  <input
-                                    size="1"
-                                    type="text"
-                                    name="form_fields[field_5b72cbc]"
-                                    id="form-field-field_5b72cbc"
-                                    class="elementor-field elementor-size-sm elementor-field-textual"
-                                  />
-                                </div>
-                                <div
-                                  class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-username elementor-col-100 elementor-field-required"
-                                >
-                                  <label
-                                    for="form-field-username"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;svg aria-hidden="true" class="label-icons dce-form-icon e-font-icon-svg e-far-user-circle" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M248 104c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96zm0 144c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm0-240C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-49.7 0-95.1-18.3-130.1-48.4 14.9-23 40.4-38.6 69.6-39.5 20.8 6.4 40.6 9.6 60.5 9.6s39.7-3.1 60.5-9.6c29.2 1 54.7 16.5 69.6 39.5-35 30.1-80.4 48.4-130.1 48.4zm162.7-84.1c-24.4-31.4-62.1-51.9-105.1-51.9-10.2 0-26 9.6-57.6 9.6-31.5 0-47.4-9.6-57.6-9.6-42.9 0-80.6 20.5-105.1 51.9C61.9 339.2 48 299.2 48 256c0-110.3 89.7-200 200-200s200 89.7 200 200c0 43.2-13.9 83.2-37.3 115.9z"&gt;&lt;/path&gt;&lt;/svg&gt; Username'
-                                    ><svg
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon e-font-icon-svg e-far-user-circle"
-                                      viewBox="0 0 496 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      style="margin-right: 5.33333px"
-                                    >
-                                      <path
-                                        d="M248 104c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96zm0 144c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm0-240C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-49.7 0-95.1-18.3-130.1-48.4 14.9-23 40.4-38.6 69.6-39.5 20.8 6.4 40.6 9.6 60.5 9.6s39.7-3.1 60.5-9.6c29.2 1 54.7 16.5 69.6 39.5-35 30.1-80.4 48.4-130.1 48.4zm162.7-84.1c-24.4-31.4-62.1-51.9-105.1-51.9-10.2 0-26 9.6-57.6 9.6-31.5 0-47.4-9.6-57.6-9.6-42.9 0-80.6 20.5-105.1 51.9C61.9 339.2 48 299.2 48 256c0-110.3 89.7-200 200-200s200 89.7 200 200c0 43.2-13.9 83.2-37.3 115.9z"
-                                      ></path>
-                                    </svg>
-                                    Username
-                                  </label>
-                                  <input
-                                    size="1"
-                                    type="text"
-                                    name="form_fields[username]"
-                                    id="form-field-username"
-                                    class="elementor-field elementor-size-sm elementor-field-textual"
-                                    required="required"
-                                    aria-required="true"
-                                  />
-                                </div>
-                                <div
-                                  class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required"
-                                >
-                                  <label
-                                    for="form-field-email"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;svg aria-hidden="true" class="label-icons dce-form-icon e-font-icon-svg e-far-envelope" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; Email'
-                                    ><svg
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon e-font-icon-svg e-far-envelope"
-                                      viewBox="0 0 512 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      style="margin-right: 5.33333px"
-                                    >
-                                      <path
-                                        d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"
-                                      ></path>
-                                    </svg>
-                                    Email
-                                  </label>
-                                  <input
-                                    size="1"
-                                    type="email"
-                                    name="form_fields[email]"
-                                    id="form-field-email"
-                                    class="elementor-field elementor-size-sm elementor-field-textual"
-                                    required="required"
-                                    aria-required="true"
-                                  />
-                                </div>
-                                <div
-                                  class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-field_98cedf2 elementor-col-100 elementor-field-required"
-                                >
-                                  <label
-                                    for="form-field-field_98cedf2"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;i aria-hidden="true" class="label-icons dce-form-icon icon icon-smartphone2"&gt;&lt;/i&gt; Phone No.'
-                                    ><i
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon icon icon-smartphone2"
-                                    ></i>
-                                    Phone No.
-                                  </label>
-                                  <input
-                                    size="1"
-                                    type="tel"
-                                    name="form_fields[field_98cedf2]"
-                                    id="form-field-field_98cedf2"
-                                    class="elementor-field elementor-size-sm elementor-field-textual"
-                                    required="required"
-                                    aria-required="true"
-                                    pattern="[0-9()#&amp;+*-=.]+"
-                                    title="Only numbers and phone characters (#, -, *, etc) are accepted."
-                                  />
-                                </div>
-                                <div
-                                  class="elementor-field-type-html elementor-field-group elementor-column elementor-field-group-field_90e8659 elementor-col-100"
-                                >
-                                  Crop Your Image Before Uploading
-                                </div>
-                                <div
-                                  class="elementor-field-type-upload elementor-field-group elementor-column elementor-field-group-field_b87ca47 elementor-col-100"
-                                >
-                                  <label
-                                    for="form-field-field_b87ca47"
-                                    class="elementor-field-label"
-                                  >
-                                    Profile Picture
-                                  </label>
-                                  <input
-                                    type="file"
-                                    name="form_fields[field_b87ca47]"
-                                    id="form-field-field_b87ca47"
-                                    class="elementor-field elementor-size-sm elementor-upload-field"
-                                    data-maxsize="10"
-                                    data-maxsize-message="This file exceeds the maximum allowed size."
-                                  />
-                                </div>
-                                <div
-                                  class="elementor-field-type-password elementor-field-group elementor-column elementor-field-group-password elementor-col-100 elementor-field-required"
-                                >
-                                  <label
-                                    for="form-field-password"
-                                    class="elementor-field-label"
-                                    dce-icon-render='&lt;svg aria-hidden="true" class="label-icons dce-form-icon e-font-icon-svg e-far-compass" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path d="M347.94 129.86L203.6 195.83a31.938 31.938 0 0 0-15.77 15.77l-65.97 144.34c-7.61 16.65 9.54 33.81 26.2 26.2l144.34-65.97a31.938 31.938 0 0 0 15.77-15.77l65.97-144.34c7.61-16.66-9.54-33.81-26.2-26.2zm-77.36 148.72c-12.47 12.47-32.69 12.47-45.16 0-12.47-12.47-12.47-32.69 0-45.16 12.47-12.47 32.69-12.47 45.16 0 12.47 12.47 12.47 32.69 0 45.16zM248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 448c-110.28 0-200-89.72-200-200S137.72 56 248 56s200 89.72 200 200-89.72 200-200 200z"&gt;&lt;/path&gt;&lt;/svg&gt; Password'
-                                    ><svg
-                                      aria-hidden="true"
-                                      class="label-icons dce-form-icon e-font-icon-svg e-far-compass"
-                                      viewBox="0 0 496 512"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      style="margin-right: 5.33333px"
-                                    >
-                                      <path
-                                        d="M347.94 129.86L203.6 195.83a31.938 31.938 0 0 0-15.77 15.77l-65.97 144.34c-7.61 16.65 9.54 33.81 26.2 26.2l144.34-65.97a31.938 31.938 0 0 0 15.77-15.77l65.97-144.34c7.61-16.66-9.54-33.81-26.2-26.2zm-77.36 148.72c-12.47 12.47-32.69 12.47-45.16 0-12.47-12.47-12.47-32.69 0-45.16 12.47-12.47 32.69-12.47 45.16 0 12.47 12.47 12.47 32.69 0 45.16zM248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 448c-110.28 0-200-89.72-200-200S137.72 56 248 56s200 89.72 200 200-89.72 200-200 200z"
-                                      ></path>
-                                    </svg>
-                                    Password
-                                  </label>
-                                  <div
-                                    class="dce-field-input-wrapper dce-field-input-wrapper-field_55cb58e"
-                                  >
-                                    <input
-                                      size="1"
-                                      type="password"
-                                      name="form_fields[password]"
-                                      id="form-field-password"
-                                      class="elementor-field elementor-size-sm elementor-field-textual dce-form-password-toggle"
-                                      required="required"
-                                      aria-required="true"
-                                    /><span
-                                      class="fa far fa-eye-slash field-icon dce-toggle-password"
-                                    ></span>
-                                  </div>
-                                </div>
-                                <div
-                                  class="elementor-field-type-radio elementor-field-group elementor-column elementor-field-group-field_55cb58e elementor-col-100 elementor-field-required"
-                                >
-                                  <label
-                                    for="form-field-field_55cb58e"
-                                    class="elementor-field-label"
-                                  >
-                                    Do you Want To Open An Account?
-                                  </label>
-                                  <div
-                                    class="elementor-field-subgroup elementor-subgroup-inline"
-                                  >
-                                    <span class="elementor-field-option"
-                                      ><input
-                                        type="radio"
-                                        value="Agree"
-                                        id="form-field-field_55cb58e-0"
-                                        name="form_fields[field_55cb58e]"
-                                        required="required"
-                                        aria-required="true"
-                                      />
-                                      <label for="form-field-field_55cb58e-0"
-                                        >Agree</label
-                                      ></span
-                                    ><span class="elementor-field-option"
-                                      ><input
-                                        type="radio"
-                                        value="Disagree"
-                                        id="form-field-field_55cb58e-1"
-                                        name="form_fields[field_55cb58e]"
-                                        required="required"
-                                        aria-required="true"
-                                      />
-                                      <label for="form-field-field_55cb58e-1"
-                                        >Disagree</label
-                                      ></span
-                                    >
-                                  </div>
-                                </div>
-                                <div
-                                  class="e-form__buttons elementor-column elementor-col-100"
-                                >
-                                  <div
-                                    class="elementor-field-group e-form__buttons__wrapper elementor-field-type-previous"
-                                  >
-                                    <button
-                                      type="button"
-                                      class="elementor-button elementor-size-sm e-form__buttons__wrapper__button e-form__buttons__wrapper__button-previous"
-                                    >
-                                      Previous
-                                    </button>
-                                  </div>
-                                  <div
-                                    class="elementor-field-group elementor-field-type-submit e-form__buttons__wrapper"
-                                  >
-                                    <button
-                                      type="submit"
-                                      class="elementor-button elementor-size-sm e-form__buttons__wrapper__button"
-                                    >
-                                      <span>
-                                        <span class="elementor-button-icon">
-                                        </span>
-                                        <span class="elementor-button-text"
-                                          >Open An Account</span
-                                        >
-                                      </span>
-                                    </button>
-                                  </div>
-                                </div>
+                                  <option value="">Select</option>
+                                  <option value="true">Agree</option>
+                                  <option value="false">Disagree</option>
+                                </select>
+                              </div>
+
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-prev">
+                                  Previous
+                                </button>
+                                <button type="submit" class="btn">
+                                  Submit
+                                </button>
                               </div>
                             </div>
                           </form>
@@ -3563,6 +2937,108 @@
         <div class="um-modal-photo"></div>
       </div>
     </div>
+
+<script>
+const form = document.getElementById("registrationForm");
+const steps = Array.from(document.querySelectorAll(".step"));
+let currentStep = 0;
+const alertBox = document.getElementById("customAlert");
+
+// Show the active step
+function showStep(index) {
+  steps.forEach((step, i) => step.classList.toggle("active", i === index));
+  clearAlert();
+}
+showStep(currentStep);
+
+// Show custom alert
+function showAlert(message) {
+  alertBox.innerText = message;
+  alertBox.style.display = "block";
+}
+
+// Clear alert
+function clearAlert() {
+  alertBox.innerText = "";
+  alertBox.style.display = "none";
+}
+
+// Validate current step required fields
+function validateStep(stepIndex) {
+  const currentFields = steps[stepIndex].querySelectorAll("[required]");
+  for (let field of currentFields) {
+    if (!field.value) {
+      showAlert(`Please fill the "${field.previousElementSibling.innerText}" field.`);
+      field.focus();
+      return false;
+    }
+  }
+  clearAlert();
+  return true;
+}
+
+// Handle next buttons
+document.querySelectorAll(".next-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (validateStep(currentStep)) {
+      if (currentStep < steps.length - 1) {
+        currentStep++;
+        showStep(currentStep);
+      }
+    }
+  });
+});
+
+// Handle previous buttons
+document.querySelectorAll(".btn-prev").forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (currentStep > 0) {
+      currentStep--;
+      showStep(currentStep);
+    }
+  });
+});
+
+// Form submission
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  
+  if (!validateStep(currentStep)) return;
+
+  const formData = new FormData(form);
+
+  // Ensure password2 is sent
+  if (!formData.get("password2") && formData.get("password")) {
+    formData.append("password2", formData.get("password"));
+  }
+
+  try {
+    const response = await fetch("https://silverline.pythonanywhere.com/api/auth/register/", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      console.log(data);
+      // Redirect to login page
+      window.location.href = "login.html";
+    } else {
+      let errors = "";
+      for (const key in data) {
+        errors += `${key}: ${Array.isArray(data[key]) ? data[key].join(", ") : data[key]}\n`;
+      }
+      showAlert("Registration failed:\n" + errors);
+      console.error(data);
+    }
+  } catch (error) {
+    showAlert("Network or server error: " + error);
+    console.error(error);
+  }
+});
+</script>
+
     <script type="speculationrules">
       {
         "prefetch": [

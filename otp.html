@@ -2024,24 +2024,19 @@
                         data-widget_type="text-editor.default"
                       >
                         <div class="elementor-widget-container">
-                          <div class="otp-verification-form">
+                          <div class="otp-verification-forms">
                             <h5>Enter OTP</h5>
-                            <form method="POST" action="">
-                              <input
-                                type="text"
-                                name="otp"
-                                id="otp"
-                                required=""
-                              />
-                              <input
-                                type="submit"
-                                name="trapz_verify_otp"
-                                value="Verify OTP"
-                              />
+
+                            <form id="otpForm">
+                              <div id="otpAlert" 
+     style="display:none; background:#ffdddd; padding:10px; color:#b30000; margin-bottom:10px; border-left:4px solid red;">
+</div>
+                              <input type="text" name="otp" id="otp" required />
+                              <button type="submit">Verify OTP</button>
                             </form>
                           </div>
                           <style>
-                            .otp-verification-form {
+                            .otp-verification-forms {
                               max-width: 400px;
                               margin: 50px auto;
                               padding: 20px;
@@ -2050,14 +2045,14 @@
                               box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
                               text-align: center;
                             }
-                            .otp-verification-form label {
+                            .otp-verification-forms label {
                               display: block;
                               font-weight: bold;
                               margin-bottom: 10px;
                               color: #333;
                             }
-                            .otp-verification-form input[type="text"],
-                            .otp-verification-form input[type="submit"] {
+                            .otp-verification-forms input[type="text"],
+                            .otp-verification-forms input[type="submit"] {
                               width: 100%;
                               padding: 10px;
                               margin-bottom: 20px;
@@ -2065,12 +2060,12 @@
                               border: 1px solid #ccc;
                               box-sizing: border-box;
                             }
-                            .otp-verification-form input[type="submit"] {
+                            .otp-verification-forms input[type="submit"] {
                               background-color: #135e96;
                               color: #fff;
                               cursor: pointer;
                             }
-                            .otp-verification-form input[type="submit"]:hover {
+                            .otp-verification-forms input[type="submit"]:hover {
                               background-color: #135e96;
                             }
                           </style>
@@ -2215,6 +2210,56 @@
         <div class="um-modal-photo"></div>
       </div>
     </div>
+    <script>
+      const otpForm = document.getElementById("otpForm");
+      const otpAlert = document.getElementById("otpAlert");
+
+      // Retrieve user_id from previous login step (you can store it in localStorage)
+      const userId = localStorage.getItem("otp_user_id");
+
+      otpForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        otpAlert.style.display = "none";
+
+        const otp = document.getElementById("otp").value.trim();
+
+        if (!otp) {
+          otpAlert.textContent = "Please enter the OTP.";
+          otpAlert.style.display = "block";
+          return;
+        }
+
+        try {
+          const response = await fetch(
+            "https://silverline.pythonanywhere.com/api/auth/otp-verify/",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ user_id: userId, otp: otp }),
+            }
+          );
+
+          const data = await response.json();
+
+          if (response.ok) {
+            // Store JWT tokens in localStorage
+            localStorage.setItem("access_token", data.access);
+            localStorage.setItem("refresh_token", data.refresh);
+
+            // Redirect to dashboard or desired page
+            window.location.href = "dashboard.html";
+          } else {
+            otpAlert.textContent =
+              data.detail || "Invalid OTP. Please try again.";
+            otpAlert.style.display = "block";
+          }
+        } catch (error) {
+          otpAlert.textContent = "Network error: " + error;
+          otpAlert.style.display = "block";
+          console.error(error);
+        }
+      });
+    </script>
     <script type="speculationrules">
       {
         "prefetch": [

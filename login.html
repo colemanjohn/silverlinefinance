@@ -2427,9 +2427,10 @@
 
                             <!-- Submit Button -->
                             <div class="form-group">
-                              <button type="submit" class="btn btn-primary">
-                                Log In
-                              </button>
+                              <button type="submit" id="loginBtn">
+                              <span class="btn-text">Login</span>
+                              <span class="btn-spinner" style="display:none;">Logging in...</span>
+                            </button>
                             </div>
 
                             <!-- Custom Alert -->
@@ -2627,10 +2628,15 @@
 <script>
 const loginForm = document.getElementById("loginForm");
 const loginAlert = document.getElementById("loginAlert");
+const loginBtn = document.getElementById("loginBtn");
 
 loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   loginAlert.style.display = "none";
+
+  // Show loading state
+  loginBtn.disabled = true;
+  loginBtn.textContent = "Logging in...";
 
   const formData = new FormData(loginForm);
   const payload = {
@@ -2639,147 +2645,37 @@ loginForm.addEventListener("submit", async (e) => {
   };
 
   try {
-    const response = await fetch("https://silverline.pythonanywhere.com/api/auth/login/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+    const response = await fetch(
+      "https://silverline.pythonanywhere.com/api/auth/login/",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }
+    );
 
     const data = await response.json();
 
     if (response.ok) {
-      // Save user_id in localStorage for OTP verification
-      
-<script>
-const loginForm = document.getElementById("loginForm");
-const loginAlert = document.getElementById("loginAlert");
-
-loginForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  loginAlert.style.display = "none";
-
-  const formData = new FormData(loginForm);
-  const payload = {
-    login: formData.get("username"),
-    password: formData.get("password"),
-  };
-
-  try {
-    const response = await fetch("https://silverline.pythonanywhere.com/api/auth/login/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-
-    const data = await response.json();
-
-    if (response.ok) {
-      // Save user_id in localStorage for OTP verification
       localStorage.setItem("otp_user_id", data.user_id);
-      // Redirect to OTP page
       window.location.href = "otp.html";
     } else {
-      loginAlert.textContent = data.detail || "Login failed. Check your credentials.";
+      loginAlert.textContent =
+        data.detail || "Login failed. Check your credentials.";
       loginAlert.style.display = "block";
     }
   } catch (error) {
-    loginAlert.textContent = "Network error: " + error;
+    loginAlert.textContent = "Network error. Please try again.";
     loginAlert.style.display = "block";
     console.error(error);
+  } finally {
+    // Restore button state if login fails
+    loginBtn.disabled = false;
+    loginBtn.textContent = "Login";
   }
 });
 </script>
-<script>
-const loginForm = document.getElementById("loginForm");
-const loginAlert = document.getElementById("loginAlert");
 
-loginForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  loginAlert.style.display = "none";
-
-  const formData = new FormData(loginForm);
-  const payload = {
-    login: formData.get("username"),
-    password: formData.get("password"),
-  };
-
-  try {
-    const response = await fetch("https://silverline.pythonanywhere.com/api/auth/login/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-
-    const data = await response.json();
-
-    if (response.ok) {
-      // Save user_id in localStorage for OTP verification
-      localStorage.setItem("otp_user_id", data.user_id);
-      // Redirect to OTP page
-      window.location.href = "otp.html";
-    } else {
-      loginAlert.textContent = data.detail || "Login failed. Check your credentials.";
-      loginAlert.style.display = "block";
-    }
-  } catch (error) {
-    loginAlert.textContent = "Network error: " + error;
-    loginAlert.style.display = "block";
-    console.error(error);
-  }
-});
-</script>
-<script>
-const loginForm = document.getElementById("loginForm");
-const loginAlert = document.getElementById("loginAlert");
-
-loginForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  loginAlert.style.display = "none";
-
-  const formData = new FormData(loginForm);
-  const payload = {
-    login: formData.get("username"),
-    password: formData.get("password"),
-  };
-
-  try {
-    const response = await fetch("https://silverline.pythonanywhere.com/api/auth/login/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-
-    const data = await response.json();
-
-    if (response.ok) {
-      // Save user_id in localStorage for OTP verification
-      localStorage.setItem("otp_user_id", data.user_id);
-      // Redirect to OTP page
-      window.location.href = "otp.html";
-    } else {
-      loginAlert.textContent = data.detail || "Login failed. Check your credentials.";
-      loginAlert.style.display = "block";
-    }
-  } catch (error) {
-    loginAlert.textContent = "Network error: " + error;
-    loginAlert.style.display = "block";
-    console.error(error);
-  }
-});
-</script>
-      // Redirect to OTP page
-      window.location.href = "otp.html";
-    } else {
-      loginAlert.textContent = data.detail || "Login failed. Check your credentials.";
-      loginAlert.style.display = "block";
-    }
-  } catch (error) {
-    loginAlert.textContent = "Network error: " + error;
-    loginAlert.style.display = "block";
-    console.error(error);
-  }
-});
-</script>
 
     <script type="text/javascript">
       const lazyloadRunObserver = () => {

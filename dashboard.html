@@ -2492,7 +2492,7 @@
                           </a>
                         </li>
                         <li class="elementor-icon-list-item">
-                          <a href="transfer.html" role="link">
+                          <a href="p2p.html" role="link">
                             <span class="elementor-icon-list-icon">
                               <svg
                                 aria-hidden="true"
@@ -3332,7 +3332,8 @@
                                 aria-haspopup="true"
                                 aria-controls="sm-1765388276114316-2"
                                 aria-expanded="false"
-                                >Hi, Joe<span class="sub-arrow"
+                                >Hi,  <span class="username" style="padding-left:5px"></span>
+                                <span class="sub-arrow"
                                   ><svg
                                     class="e-font-icon-svg e-fas-caret-down"
                                     viewBox="0 0 320 512"
@@ -3385,7 +3386,8 @@
                                 aria-haspopup="true"
                                 aria-controls="sm-1765388276118556-2"
                                 aria-expanded="false"
-                                >Hi, Joe<span class="sub-arrow"
+                                >Hi, <span class="username" style="padding-left:5px"></span>
+                                <span class="sub-arrow"
                                   ><svg
                                     class="e-font-icon-svg e-fas-caret-down"
                                     viewBox="0 0 320 512"
@@ -3491,7 +3493,8 @@
                                 aria-haspopup="true"
                                 aria-controls="sm-17653882761323052-2"
                                 aria-expanded="false"
-                                >Hi, Joe<span class="sub-arrow"
+                                >Hi, <span class="username" style="padding-left:5px"></span>
+                                <span class="sub-arrow"
                                   ><svg
                                     class="e-font-icon-svg e-fas-caret-down"
                                     viewBox="0 0 320 512"
@@ -3544,7 +3547,7 @@
                                 aria-haspopup="true"
                                 aria-controls="sm-17653882761345933-2"
                                 aria-expanded="false"
-                                >Hi, Joe<span class="sub-arrow"
+                                >Hi, <span class="username" style="padding-left:5px"></span><span class="sub-arrow"
                                   ><svg
                                     class="e-font-icon-svg e-fas-caret-down"
                                     viewBox="0 0 320 512"
@@ -4066,7 +4069,7 @@
                                         aria-haspopup="true"
                                         aria-controls="sm-17653882761965688-2"
                                         aria-expanded="false"
-                                        >Hi, Joe<span class="sub-arrow"
+                                        >Hi, <span class="username" style="padding-left:5px"></span><span class="sub-arrow"
                                           ><svg
                                             class="e-font-icon-svg e-fas-caret-down"
                                             viewBox="0 0 320 512"
@@ -4119,7 +4122,7 @@
                                         aria-haspopup="true"
                                         aria-controls="sm-17653882762005771-2"
                                         aria-expanded="false"
-                                        >Hi, Joe<span class="sub-arrow"
+                                        >Hi, <span class="username" style="padding-left:5px"></span><span class="sub-arrow"
                                           ><svg
                                             class="e-font-icon-svg e-fas-caret-down"
                                             viewBox="0 0 320 512"
@@ -4440,38 +4443,8 @@
                                 </h2>
                               </div>
                             </div>
-                            <div
-                              class="elementor-element elementor-element-cb0b9ce elementor-widget__width-auto elementor-widget elementor-widget-shortcode"
-                              data-id="cb0b9ce"
-                              data-element_type="widget"
-                              data-settings='{"ekit_we_effect_on":"none"}'
-                              data-widget_type="shortcode.default"
-                            >
-                              <div class="elementor-widget-container">
-                                <div class="elementor-shortcode">
-                                  <img
-                                    decoding="async"
-                                    src="https://www.districtfinancialltd.com/wp-content/plugins/user-ip-and-location/flags/ng.png"
-                                    style="
-                                      height: 20 !important;
-                                      width: 30px !important;
-                                    "
-                                    onmouseover=""
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              class="elementor-element elementor-element-cd27182 elementor-widget__width-auto elementor-widget elementor-widget-text-editor"
-                              data-id="cd27182"
-                              data-element_type="widget"
-                              data-settings='{"ekit_we_effect_on":"none"}'
-                              data-widget_type="text-editor.default"
-                            >
-                              <div class="elementor-widget-container">
-                                102.88.109.140
-                              </div>
-                            </div>
+                            
+                            
                             <div
                               class="elementor-element elementor-element-a9dfe5c elementor-widget elementor-widget-heading"
                               data-id="a9dfe5c"
@@ -5351,10 +5324,10 @@
             console.log("Profile picture elements:", profilePicEls);
 
             /* ================= SINGLE FIELDS ================= */
-            const usernameEl = document.getElementById("username");
+            const usernameEl = document.querySelectorAll(".username").forEach((el) => (el.textContent = data.first_name));;
             const emailEl = document.getElementById("email");
 
-            if (usernameEl) usernameEl.textContent = data.username;
+            
             if (emailEl) emailEl.textContent = data.email;
 
             /* ================= MULTIPLE FIELDS ================= */

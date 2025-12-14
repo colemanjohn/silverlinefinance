@@ -1106,7 +1106,13 @@ if(!$(e.target).closest('.elementor-location-header').length && !$(e.target).has
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-4067c40b dce_masking-none elementor-widget elementor-widget-image" data-id="4067c40b" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-													<img decoding="async" src="https://www.districtfinancialltd.com/wp-content/uploads/elementor/forms/69398af59d52d.jpeg" title="" alt="" loading="lazy">													</div>
+													<img
+                                  decoding="async"
+                                  title=""
+                                  class="profile-pic"
+                                  alt="Profile Picture"
+                                  loading="lazy"
+                                />													</div>
 				</div>
 					</div>
 		</div>
@@ -1122,7 +1128,13 @@ if(!$(e.target).closest('.elementor-location-header').length && !$(e.target).has
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-ba66f87 dce_masking-none elementor-widget elementor-widget-image" data-id="ba66f87" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-													<img decoding="async" src="https://www.districtfinancialltd.com/wp-content/uploads/elementor/forms/69398af59d52d.jpeg" title="" alt="" loading="lazy">													</div>
+													<img
+                                  decoding="async"
+                                  title=""
+                                  class="profile-pic"
+                                  alt="Profile Picture"
+                                  loading="lazy"
+                                />													</div>
 				</div>
 					</div>
 		</div>
@@ -1380,7 +1392,8 @@ if(!$(e.target).closest('.elementor-location-header').length && !$(e.target).has
 				</div>
 				<div class="elementor-element elementor-element-6bab318 elementor-widget elementor-widget-text-editor" data-id="6bab318" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-							Hi, Grey Norman, welcome to your dashboard						</div>
+							Hi, <span class="firstname"></span
+                        ><span class="lastname"></span>, welcome to your dashboard						</div>
 				</div>
 					</div>
 		</div>
@@ -1466,7 +1479,8 @@ if(!$(e.target).closest('.elementor-location-header').length && !$(e.target).has
             </div>
             <div class="card-details">
                 <div class="card-number">5129 3017 6089 6691</div>
-                <div class="card-holder">Grey Norman</div>
+                <div class="card-holder"><span class="firstname"></span
+                        ><span class="lastname"></span></div>
                 <div class="card-footer">
                     <div class="expiry-date">12/30</div>
                     <span>cvv:</span><div class="cvv" id="mastercard-cvv">***</div>
@@ -1511,7 +1525,8 @@ if(!$(e.target).closest('.elementor-location-header').length && !$(e.target).has
             </div>
             <div class="card-details">
                 <div class="card-number">4474 7373 4330 1361</div>
-                <div class="card-holder">Grey Norman</div>
+                <div class="card-holder"><span class="firstname"></span
+                        ><span class="lastname"></span></div>
                 <div class="card-footer">
                     <div class="expiry-date">12/29</div>
                     <span>cvv:</span><div class="cvv" id="visa-cvv">***</div>
@@ -1556,7 +1571,8 @@ if(!$(e.target).closest('.elementor-location-header').length && !$(e.target).has
             </div>
             <div class="card-details">
                 <div class="card-number">3720 855010 00662</div>
-                <div class="card-holder">Grey Norman</div>
+                <div class="card-holder"><span class="firstname"></span
+                        ><span class="lastname"></span></div>
                 <div class="card-footer">
                     <div class="expiry-date">12/30</div>
                     <span>cvv:</span><div class="cvv" id="amex-cvv">****</div>
@@ -1848,7 +1864,233 @@ if(!$(e.target).closest('.elementor-location-header').length && !$(e.target).has
 
 					<div id="cmplz-manage-consent" data-nosnippet="true"><button class="cmplz-btn cmplz-manage-consent manage-consent-1 cmplz-show">Manage Cookie Consent</button>
 
-</div>			<script type="text/javascript">
+</div>			
+    <script defer>
+      const token = localStorage.getItem("access_token");
+      const bankHistory = document.getElementById("bankHistory");
+
+      if (!token) {
+        window.location.href = "login.html";
+      }
+
+      let refreshInterval = null;
+
+      function formatDate(dateString) {
+        const date = new Date(dateString);
+        const today = new Date();
+
+        if (date.toDateString() === today.toDateString()) return "Today";
+
+        const yesterday = new Date();
+        yesterday.setDate(today.getDate() - 1);
+        if (date.toDateString() === yesterday.toDateString())
+          return "Yesterday";
+
+        return date.toLocaleDateString();
+      }
+
+      async function loadTransactions() {
+        try {
+          const response = await fetch(
+            "https://silverline.pythonanywhere.com/api/transactions/",
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
+
+          if (response.status === 401) {
+            clearInterval(refreshInterval);
+            localStorage.clear();
+            window.location.href = "login.html";
+            return;
+          }
+
+          const data = await response.json();
+          bankHistory.innerHTML = "";
+
+          if (!data.length) {
+            bankHistory.innerHTML = "<p>No transactions found</p>";
+            return;
+          }
+
+          data.forEach((tx) => {
+            const isCredit = tx.transaction_type === "CR";
+
+            const amountFormatted = Number(tx.amount).toLocaleString("en-US", {
+              style: "currency",
+              currency: "USD",
+            });
+
+            const transactionEl = document.createElement("div");
+            transactionEl.className = "transaction";
+
+            transactionEl.innerHTML = `
+          <img src="${
+            isCredit
+              ? "https://www.districtfinancialltd.com/wp-content/plugins/trapz-hot-bank-2/images/credit.png"
+              : "https://www.districtfinancialltd.com/wp-content/plugins/trapz-hot-bank-2/images/debit.png"
+          }" class="logo">
+
+          <div class="details">
+            <div class="recipient">
+              ${tx.description || (isCredit ? "Direct Deposit" : "Payment")}<br>
+              <span class="website-account-info">
+                TXN${tx.id} | Silverline Finance Limited
+              </span>
+            </div>
+
+            <div class="date">${formatDate(tx.created_at)}</div>
+
+            <div class="amount ${isCredit ? "credit" : "debit"}">
+              <span style="color:${isCredit ? "green" : "red"}">
+                ${isCredit ? "+" : "-"}${amountFormatted}
+              </span>
+            </div>
+          </div>
+        `;
+
+            bankHistory.appendChild(transactionEl);
+          });
+        } catch (error) {
+          console.error("Network error:", error);
+        }
+      }
+
+      // 🔥 Initial load
+      loadTransactions();
+
+      // 🔁 Refresh every 5 seconds
+      refreshInterval = setInterval(loadTransactions, 5000);
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        async function loadUser() {
+          const token = localStorage.getItem("access_token");
+
+          if (!token) {
+            window.location.href = "login.html";
+            return;
+          }
+
+          try {
+            const response = await fetch(
+              "https://silverline.pythonanywhere.com/api/auth/user/",
+              {
+                headers: {
+                  Authorization: `Bearer ${token}`,
+                },
+              }
+            );
+
+            const data = await response.json();
+
+            if (!response.ok) {
+              console.error("API error:", data);
+              window.location.href = "login.html";
+              return;
+            }
+
+            console.log("User:", data);
+
+            /* ================= PROFILE IMAGE ================= */
+            const profilePicEls = document.querySelectorAll(".profile-pic");
+
+            if (profilePicEls.length && data.profile_picture) {
+              const profilePicUrl =
+                "https://silverline.pythonanywhere.com" + data.profile_picture;
+
+              profilePicEls.forEach((el) => {
+                el.src = profilePicUrl;
+              });
+            }
+
+            console.log("Profile picture elements:", profilePicEls);
+
+            /* ================= SINGLE FIELDS ================= */
+            const usernameEl = document.querySelectorAll(".username").forEach((el) => (el.textContent = data.first_name));;
+            const emailEl = document.getElementById("email");
+
+            
+            if (emailEl) emailEl.textContent = data.email;
+
+            /* ================= MULTIPLE FIELDS ================= */
+            document
+              .querySelectorAll(".firstname")
+              .forEach((el) => (el.textContent = data.first_name));
+
+            document
+              .querySelectorAll(".lastname")
+              .forEach((el) => (el.textContent = data.last_name));
+
+            document
+              .querySelectorAll(".country")
+              .forEach((el) => (el.textContent = data.country));
+
+            document
+              .querySelectorAll(".phone")
+              .forEach((el) => (el.textContent = data.phone));
+
+            document
+              .querySelectorAll(".address")
+              .forEach((el) => (el.textContent = data.address));
+          } catch (err) {
+            console.error("Network error:", err);
+            window.location.href = "login.html";
+          }
+        }
+
+        loadUser();
+      });
+    </script>
+    <script defer>
+      if (!token) {
+        window.location.href = "login.html";
+      }
+
+      // Get the balance element
+      const balanceEl = document.getElementById("balance");
+
+      if (!balanceEl) {
+        console.error("❌ Balance element not found in HTML");
+      } else {
+        // Fetch and update balance
+        async function updateBalance() {
+          try {
+            const response = await fetch(
+              "https://silverline.pythonanywhere.com/api/auth/user/",
+              {
+                headers: {
+                  Authorization: `Bearer ${token}`,
+                },
+              }
+            );
+
+            if (response.status === 401) {
+              localStorage.clear();
+              window.location.href = "login.html";
+              return;
+            }
+
+            const data = await response.json();
+
+            // ✅ Update balance
+            balanceEl.textContent = data.balance;
+          } catch (err) {
+            console.error("Failed to fetch balance:", err);
+          }
+        }
+
+        // Initial balance load
+        updateBalance();
+
+        // Poll balance every 5 seconds
+        setInterval(updateBalance, 5000);
+      }
+    </script>
+<script type="text/javascript">
 				const lazyloadRunObserver = () => {
 					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
 					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {

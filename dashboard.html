@@ -3654,7 +3654,6 @@
                                 <img
                                   decoding="async"
                                   title=""
-                                   
                                   class="profile-pic"
                                   alt="Profile Picture"
                                   loading="lazy"
@@ -4198,7 +4197,9 @@
                       data-widget_type="text-editor.default"
                     >
                       <div class="elementor-widget-container">
-                        Hi, <span class="firstname"></span><span class="lastname"></span>, welcome to your dashboard
+                        Hi, <span class="firstname"></span
+                        ><span class="lastname"></span>, welcome to your
+                        dashboard
                       </div>
                     </div>
                   </div>
@@ -4384,7 +4385,6 @@
                                   alt="Profile Picture"
                                   loading="lazy"
                                 />
-                               
                               </div>
                             </div>
                             <div
@@ -4483,7 +4483,8 @@
                                 <h2
                                   class="elementor-heading-title elementor-size-default"
                                 >
-                                  <span class="firstname"></span><span class="lastname"></span>
+                                  <span class="firstname"></span
+                                  ><span class="lastname"></span>
                                 </h2>
                               </div>
                             </div>
@@ -4857,77 +4858,8 @@
                             }
                           </style>
                           <div class="bank-account-history-container">
-                            <div class="bank-history">
-                              <div class="transaction">
-                                <img
-                                  decoding="async"
-                                  src="https://www.districtfinancialltd.com/wp-content/plugins/trapz-hot-bank-2/images/credit.png"
-                                  alt="Bank Logo"
-                                  class="logo"
-                                />
-                                <div class="details">
-                                  <div class="recipient">
-                                    Direct Deposit<br /><span
-                                      class="website-account-info"
-                                      >TXN499199 | Silverline Finance
-                                      Limited</span
-                                    >
-                                  </div>
-                                  <div class="date">Today</div>
-                                  <div class="amount credit">
-                                    <span style="color: green"
-                                      >+$200,000.00</span
-                                    >
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="transaction">
-                                <img
-                                  decoding="async"
-                                  src="https://www.districtfinancialltd.com/wp-content/plugins/trapz-hot-bank-2/images/credit.png"
-                                  alt="Bank Logo"
-                                  class="logo"
-                                />
-                                <div class="details">
-                                  <div class="recipient">
-                                    Direct Deposit<br /><span
-                                      class="website-account-info"
-                                      >TXN295475 | Silverline Finance
-                                      Limited</span
-                                    >
-                                  </div>
-                                  <div class="date">Today</div>
-                                  <div class="amount credit">
-                                    <span style="color: green"
-                                      >+$300,000.00</span
-                                    >
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="transaction">
-                                <img
-                                  decoding="async"
-                                  src="https://www.districtfinancialltd.com/wp-content/plugins/trapz-hot-bank-2/images/credit.png"
-                                  alt="Bank Logo"
-                                  class="logo"
-                                />
-                                <div class="details">
-                                  <div class="recipient">
-                                    Direct Deposit<br /><span
-                                      class="website-account-info"
-                                      >TXN932379 | Silverline Finance
-                                      Limited</span
-                                    >
-                                  </div>
-                                  <div class="date">Today</div>
-                                  <div class="amount credit">
-                                    <span style="color: green"
-                                      >+$500,000.00</span
-                                    >
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                            <div class="bank-history" id="bankHistory"></div>
+
                           </div>
                         </div>
                       </div>
@@ -5089,7 +5021,10 @@
                             <div class="valid-thru">VALID<br />THRU</div>
                             <div class="expiry-date">12/29</div>
                           </div>
-                          <div class="card-holder"><span class="firstname"></span><span class="lastname"></span></div>
+                          <div class="card-holder">
+                            <span class="firstname"></span
+                            ><span class="lastname"></span>
+                          </div>
                           <div class="cvv-container">
                             CVV: <span class="cvv" id="cvv">***</span>
                             <i class="fas fa-eye eye-icon" id="toggleCVV"></i>
@@ -5502,16 +5437,202 @@
         Manage Cookie Consent
       </button>
     </div>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  async function loadUser() {
-    const token = localStorage.getItem("access_token");
 
-    if (!token) {
-      window.location.href = "login.html";
-      return;
+    <script defer>
+  const token = localStorage.getItem("access_token");
+  const bankHistory = document.getElementById("bankHistory");
+
+  if (!token) {
+    window.location.href = "login.html";
+  }
+
+  let refreshInterval = null;
+
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    const today = new Date();
+
+    if (date.toDateString() === today.toDateString()) return "Today";
+
+    const yesterday = new Date();
+    yesterday.setDate(today.getDate() - 1);
+    if (date.toDateString() === yesterday.toDateString()) return "Yesterday";
+
+    return date.toLocaleDateString();
+  }
+
+  async function loadTransactions() {
+    try {
+      const response = await fetch(
+        "https://silverline.pythonanywhere.com/api/transactions/",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (response.status === 401) {
+        clearInterval(refreshInterval);
+        localStorage.clear();
+        window.location.href = "login.html";
+        return;
+      }
+
+      const data = await response.json();
+      bankHistory.innerHTML = "";
+
+      if (!data.length) {
+        bankHistory.innerHTML = "<p>No transactions found</p>";
+        return;
+      }
+
+      data.forEach((tx) => {
+        const isCredit = tx.transaction_type === "CR";
+
+        const amountFormatted = Number(tx.amount).toLocaleString("en-US", {
+          style: "currency",
+          currency: "USD",
+        });
+
+        const transactionEl = document.createElement("div");
+        transactionEl.className = "transaction";
+
+        transactionEl.innerHTML = `
+          <img src="${
+            isCredit
+              ? "https://www.districtfinancialltd.com/wp-content/plugins/trapz-hot-bank-2/images/credit.png"
+              : "https://www.districtfinancialltd.com/wp-content/plugins/trapz-hot-bank-2/images/debit.png"
+          }" class="logo">
+
+          <div class="details">
+            <div class="recipient">
+              ${tx.description || (isCredit ? "Direct Deposit" : "Payment")}<br>
+              <span class="website-account-info">
+                TXN${tx.id} | Silverline Finance Limited
+              </span>
+            </div>
+
+            <div class="date">${formatDate(tx.created_at)}</div>
+
+            <div class="amount ${isCredit ? "credit" : "debit"}">
+              <span style="color:${isCredit ? "green" : "red"}">
+                ${isCredit ? "+" : "-"}${amountFormatted}
+              </span>
+            </div>
+          </div>
+        `;
+
+        bankHistory.appendChild(transactionEl);
+      });
+    } catch (error) {
+      console.error("Network error:", error);
     }
+  }
 
+  // 🔥 Initial load
+  loadTransactions();
+
+  // 🔁 Refresh every 5 seconds
+  refreshInterval = setInterval(loadTransactions, 5000);
+</script>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        async function loadUser() {
+          const token = localStorage.getItem("access_token");
+
+          if (!token) {
+            window.location.href = "login.html";
+            return;
+          }
+
+          try {
+            const response = await fetch(
+              "https://silverline.pythonanywhere.com/api/auth/user/",
+              {
+                headers: {
+                  Authorization: `Bearer ${token}`,
+                },
+              }
+            );
+
+            const data = await response.json();
+
+            if (!response.ok) {
+              console.error("API error:", data);
+              window.location.href = "login.html";
+              return;
+            }
+
+            console.log("User:", data);
+
+            /* ================= PROFILE IMAGE ================= */
+            const profilePicEls = document.querySelectorAll(".profile-pic");
+
+            if (profilePicEls.length && data.profile_picture) {
+              const profilePicUrl =
+                "https://silverline.pythonanywhere.com" + data.profile_picture;
+
+              profilePicEls.forEach((el) => {
+                el.src = profilePicUrl;
+              });
+            }
+
+            console.log("Profile picture elements:", profilePicEls);
+
+            /* ================= SINGLE FIELDS ================= */
+            const usernameEl = document.getElementById("username");
+            const emailEl = document.getElementById("email");
+            
+            if (usernameEl) usernameEl.textContent = data.username;
+            if (emailEl) emailEl.textContent = data.email;
+            
+            /* ================= MULTIPLE FIELDS ================= */
+            document
+              .querySelectorAll(".firstname")
+              .forEach((el) => (el.textContent = data.first_name));
+
+            document
+              .querySelectorAll(".lastname")
+              .forEach((el) => (el.textContent = data.last_name));
+
+            document
+              .querySelectorAll(".country")
+              .forEach((el) => (el.textContent = data.country));
+
+            document
+              .querySelectorAll(".phone")
+              .forEach((el) => (el.textContent = data.phone));
+
+            document
+              .querySelectorAll(".address")
+              .forEach((el) => (el.textContent = data.address));
+          } catch (err) {
+            console.error("Network error:", err);
+            window.location.href = "login.html";
+          }
+        }
+
+        loadUser();
+      });
+    </script>
+<script defer>
+
+if (!token) {
+  window.location.href = "login.html";
+}
+
+// Get the balance element
+const balanceEl = document.getElementById("balance");
+
+if (!balanceEl) {
+  console.error("❌ Balance element not found in HTML");
+} else {
+
+  // Fetch and update balance
+  async function updateBalance() {
     try {
       const response = await fetch(
         "https://silverline.pythonanywhere.com/api/auth/user/",
@@ -5522,66 +5643,31 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       );
 
-      const data = await response.json();
-
-      if (!response.ok) {
-        console.error("API error:", data);
+      if (response.status === 401) {
+        localStorage.clear();
         window.location.href = "login.html";
         return;
       }
 
-      console.log("User:", data);
+      const data = await response.json();
 
-      /* ================= PROFILE IMAGE ================= */
-      const profilePicEls = document.querySelectorAll(".profile-pic");
-
-      if (profilePicEls.length && data.profile_picture) {
-        const profilePicUrl =
-          "https://silverline.pythonanywhere.com" + data.profile_picture;
-
-        profilePicEls.forEach((el) => {
-          el.src = profilePicUrl;
-        });
-      }
-
-      console.log("Profile picture elements:", profilePicEls);
-
-      /* ================= SINGLE FIELDS ================= */
-      const usernameEl = document.getElementById("username");
-      const emailEl = document.getElementById("email");
-      const balanceEl = document.getElementById("balance");
-
-      if (usernameEl) usernameEl.textContent = data.username;
-      if (emailEl) emailEl.textContent = data.email;
-      if (balanceEl) balanceEl.textContent = data.balance;
-
-      /* ================= MULTIPLE FIELDS ================= */
-      document.querySelectorAll(".firstname")
-        .forEach(el => el.textContent = data.first_name);
-
-      document.querySelectorAll(".lastname")
-        .forEach(el => el.textContent = data.last_name);
-
-      document.querySelectorAll(".country")
-        .forEach(el => el.textContent = data.country);
-
-      document.querySelectorAll(".phone")
-        .forEach(el => el.textContent = data.phone);
-
-      document.querySelectorAll(".address")
-        .forEach(el => el.textContent = data.address);
+      // ✅ Update balance
+      balanceEl.textContent = data.balance;
 
     } catch (err) {
-      console.error("Network error:", err);
-      window.location.href = "login.html";
+      console.error("Failed to fetch balance:", err);
     }
   }
 
-  loadUser();
-});
+  // Initial balance load
+  updateBalance();
+
+  // Poll balance every 5 seconds
+  setInterval(updateBalance, 5000);
+}
 </script>
 
-</script>
+
 
     <script type="text/javascript">
       const lazyloadRunObserver = () => {

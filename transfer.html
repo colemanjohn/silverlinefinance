@@ -5236,13 +5236,27 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
 
+  function showTransferAlert(message, type = "success", duration = 3000) {
+  const alertEl = document.getElementById("transferAlert");
+  if (!alertEl) return;
+
+  alertEl.textContent = message;
+  alertEl.className = `transfer-alert ${type}`;
+  alertEl.style.display = "block";
+  alertEl.style.opacity = 1;
+
+  // Auto-hide
+  setTimeout(() => {
+    alertEl.style.opacity = 0;
+    setTimeout(() => (alertEl.style.display = "none"), 300);
+  }, duration);
+}
+
+
+  document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("wireTransferForm");
-  if (!form) {
-    console.error("❌ wireTransferForm not found");
-    return;
-  }
+  if (!form) return;
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
@@ -5283,20 +5297,22 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await response.json();
 
       if (!response.ok) {
-        alert(JSON.stringify(data));
+        showTransferAlert(data.detail || "Transfer failed", "error");
         return;
       }
 
-      alert("Transfer successful");
-      window.location.href = "dashboard.html";
+      showTransferAlert("Transfer successful!", "success");
+
+      // Optional: redirect after 2s
+      setTimeout(() => window.location.href = "dashboard.html", 2000);
 
     } catch (err) {
       console.error("FETCH FAILED:", err);
-      alert("Network error – request not sent");
+      showTransferAlert("Network error – request not sent", "error");
     }
   });
-
 });
+
 </script>
 
 
